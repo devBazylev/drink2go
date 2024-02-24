@@ -1,5 +1,21 @@
+@import "../global/mixins.scss";
+@import "../global/variables.scss";
+
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  width: $mobile;
+  min-height: 60px;
+  margin: 0 auto;
+}
+
+.header__list {
+  @include reset-list;
+}
+
+.header__link {
+  color: var(--main);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
 }

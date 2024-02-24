@@ -1,1 +1,40 @@
-/* здесь подключите шрифты */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/montserrat-400.woff2") format("woff2"),
+    url("../../fonts/montserrat-400.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/montserrat-500.woff2") format("woff2"),
+    url("../../fonts/montserrat-500.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/montserrat-700.woff2") format("woff2"),
+    url("../../fonts/montserrat-700.woff") format("woff");
+  font-display: swap;
+}
+
+// @mixin font($font_name, $file_name, $weight: 400, $style: normal) {
+//   @font-face {
+//     font-family: $font_name;
+//     font-style: #{$style};
+//     font-weight: #{$weight};
+//     src: url("../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff2") format("woff2"),
+//       url("../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff") format("woff");
+//     font-display: swap;
+//   }
+// }
+
+// @include font("montserrat", montserrat-400);
+// @include font("Montserrat", montserrat-700);

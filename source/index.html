@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <title>HTML Academy: Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+    <!-- <link rel="icon" href="img/favicons/favicon-152.svg" type="image/svg+xml"> -->
+    <!-- <link rel="manifest" href="manifest.webmanifest"> -->
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <script src="scripts/index.js" defer></script>
+    <!-- <script src="js/webp.js"></script> -->
   </head>
   <body class="page__body">
-    <header class="header" data-test="header">
+    <header class="header page__wrapper" data-test="header">
       <a href="#" class="header__logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-icon-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-icon-tablet.svg">
-          <img class="logo__icon" src="img/logo-icon-mobile.svg" alt="Кот победитель в плаще на фоне солнца." width="33" height="38">
+          <source media="(min-width: 1440px)" srcset="images/logo-icon-desktop">
+          <source media="(min-width: 768px)" srcset="images/logo-icon-tablet">
+          <img class="logo__icon" src="images/logo-small.svg" alt="Логотип drink2go." width="32" height="36">
         </picture>
       </a>
-      <span class="header__title visually-hidden">Интернет-магазин кофейных напитков</span>
+      <h1 class="header__title visually-hidden">Интернет-магазин кофейных напитков</h1>
       <a href="#" class="header__account"></a>
       <a href="#" class="header__basket"></a>
       <nav class="header__navigation">
@@ -38,11 +43,11 @@
     </header>
     <main>
       <section class="hero" data-test="hero">
-        <h1 class="hero__title">Декаф флэт уайт</h1>
+        <h2 class="hero__title">Декаф флэт уайт</h2>
         <p class="hero__gist">Новинка!</p>
         <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
         <span class="hero__price">225₽</span>
-        <button class="hero__button">Заказать</button>
+        <button class="hero__button button">Заказать</button>
       </section>
       <section data-test="features">
         <h2 class="features__title">Главные причины выбрать <span>drink2go</span></h2>

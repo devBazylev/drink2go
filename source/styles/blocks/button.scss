@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  width: 141px;
+  min-height: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: var(--light);
+  background-color: var(--bg-dark);
+  border-radius: 4px;
+  cursor: pointer;
+
+  // &:hover {
+  //   background-color: var(--bg-bright-dark);
+  // }
+
+  // &:active {
+  //   color: var(--color-main-pale);
+  // }
+}
