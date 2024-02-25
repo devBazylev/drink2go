@@ -13,8 +13,8 @@
     <!-- <script src="js/webp.js"></script> -->
   </head>
   <body class="page__body">
-    <header class="header page__wrapper" data-test="header">
-      <a href="#" class="header__logo">
+    <header class="header" data-test="header">
+      <a href="#" class="logo">
         <picture>
           <source media="(min-width: 1440px)" srcset="images/logo-icon-desktop">
           <source media="(min-width: 768px)" srcset="images/logo-icon-tablet">
@@ -22,8 +22,12 @@
         </picture>
       </a>
       <h1 class="header__title visually-hidden">Интернет-магазин кофейных напитков</h1>
-      <a href="#" class="header__account"></a>
-      <a href="#" class="header__basket"></a>
+      <a href="#" class="header__account-link">
+        <span class="header__account-gist visually-hidden">Войти</span>
+      </a>
+      <a href="#" class="header__basket-link">
+        <span class="header__basket-gist visually-hidden">Корзина</span>
+      </a>
       <nav class="header__navigation header__navigation--closed">
         <ul class="header__list">
           <li>
@@ -46,13 +50,15 @@
     </header>
     <main>
       <section class="hero" data-test="hero">
+        <img class="hero__image" src="images/flat-white-mobile@1x.png" width="280" height="280" alt="Кофе флэт уайт.">
         <h2 class="hero__title">Декаф флэт уайт</h2>
         <p class="hero__gist">Новинка!</p>
         <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+        <span class="hero__price hero__price--old">295₽</span>
         <span class="hero__price">225₽</span>
-        <button class="hero__button button">Заказать</button>
+        <a href="#" class="hero__button button">Заказать</a>
       </section>
-      <section data-test="features">
+      <section class="features" data-test="features">
         <h2 class="features__title">Главные причины выбрать <span>drink2go</span></h2>
         <p class="features__gist">Преимущества</p>
         <ul class="features__list">
@@ -62,7 +68,7 @@
           </li>
           <li class="features__item features__item--pocket">
             <h3 class="features__subtitle">Удобство</h3>
-            <p class="features__text">Легко помещается и в карман, и в маленькую сумочку</p>
+            <p class="features__text">Легко помещается и в карман,<br> и в маленькую сумочку</p>
           </li>
           <li class="features__item features__item--energy">
             <h3 class="features__subtitle">Бодрость</h3>
@@ -79,22 +85,25 @@
         <h2 class="catalog__title">Каталог кофейных напитков</h2>
         <div class="catalog__wrapper-form">
           <form action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset>
-              <legend class="catalog__subtitle">Цена</legend>
+            <fieldset class="catalog__range">
+              <legend class="catalog__subtitle catalog__subtitle--range">Цена</legend>
               <div class="range">
-                <div class="range__scale">
-                  <button class="range__toggle range__toggle--min">
-                    <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="range__toggle range__toggle--max">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
-                </div>
+                <div class="range__bar"></div>
+                <div class="range__scale"></div>
+                <button class="range__toggle range__toggle--min" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="range__toggle range__toggle--max" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
               </div>
+              <input class="range__price-from" type="number" name="price-from" placeholder="0" min="0" max="1000000" required>
+              <div class="range__dash"></div>
+              <input class="range__price-to" type="number" name="price-to" value="900" min="1" max="1000000" required>
             </fieldset>
-            <fieldset>
+            <fieldset class="catalog__radio">
               <legend class="catalog__subtitle">Наличие молока</legend>
-              <ul class="catalog__choice-milk">
+              <ul class="catalog__milk-list">
                 <li>
                   <label class="radio">
                     <input class="radio__input visually-hidden" type="radio" name="milk" value="any" checked>
@@ -125,9 +134,9 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="catalog__checkbox">
               <legend class="catalog__subtitle">Страна произрастания</legend>
-              <ul class="catalog__choice-country">
+              <ul class="catalog__country-list">
                 <li>
                   <label class="checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="country" checked>

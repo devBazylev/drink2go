@@ -1,2 +1,94 @@
 @import "../global/mixins.scss";
 @import "../global/variables.scss";
+
+.features {
+  display: grid;
+  padding: 50px 20px 60px;
+}
+
+.features__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+
+.features__gist {
+  order: -1;
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--bright);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.features__list {
+  @include reset-list;
+}
+
+.features__item {
+  width: 100%;
+  min-height: 142px;
+  padding: 32px 0 0;
+}
+
+.features__item--clock {
+  &::before{
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto;
+    background-image: url("../../images/stack.svg#clock");
+  }
+}
+
+.features__item--pocket {
+  &::before{
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto;
+    background-image: url("../../images/stack.svg#pocket");
+  }
+}
+
+.features__item--energy {
+  &::before{
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto;
+    background-image: url("../../images/stack.svg#energy");
+  }
+}
+
+.features__item--leaf {
+  &::before{
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto;
+    background-image: url("../../images/stack.svg#leaf");
+  }
+}
+
+.features__subtitle {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}

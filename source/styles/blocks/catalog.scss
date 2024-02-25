@@ -2,5 +2,65 @@
 @import "../global/variables.scss";
 
 .catalog {
-  background-color: var(--bg-light);
+  display: grid;
+  padding: 50px 20px 44px;
+  background-color: var(--bg-lighter);
 }
+
+.catalog__title {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+
+.catalog__gist {
+  order: -1;
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--bright);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.catalog__range {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.catalog__subtitle {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.catalog__subtitle--range {
+  grid-area: 1/1/2/4;
+}
+
+.catalog__milk-list,
+.catalog__country-list,
+.catalog__card-list {
+  @include reset-list;
+}
+
+.catalog__radio {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.catalog__checkbox {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+

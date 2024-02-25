@@ -17,9 +17,12 @@
   --light: var(--white);
   --bright: var(--violet);
   --bg-lightest: var(--white);
-  --bg-light: var(--grey-lightest);
+  --bg-lighter: var(--grey-lightest);
+  --bg-light: var(--grey-light);
+  --bg-brighter: var(--violet-light);
   --bg-bright: var(--beige);
+  --bg-darker: var(--grey);
   --bg-dark: var(--violet);
-  --border-light: var(--grey-light);
-  --border-dark: var(--violet-dark);
+  --bg-darkest: var(--black);
+  --border-light: var(--lavender);
 }
