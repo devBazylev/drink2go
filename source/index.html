@@ -16,8 +16,8 @@
     <header class="header" data-test="header">
       <a href="#" class="logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="images/logo-icon-desktop">
-          <source media="(min-width: 768px)" srcset="images/logo-icon-tablet">
+          <source media="(min-width: 1440px)" srcset="images/logo-large.svg" width="170" height="36">
+          <source media="(min-width: 768px)" srcset="images/logo-medium.svg" width="82" height="36">
           <img class="logo__icon" src="images/logo-small.svg" alt="Логотип drink2go." width="32" height="36">
         </picture>
       </a>
@@ -50,7 +50,16 @@
     </header>
     <main>
       <section class="hero" data-test="hero">
-        <img class="hero__image" src="images/flat-white-mobile@1x.png" width="280" height="280" alt="Кофе флэт уайт.">
+        <div class="hero__wrapper-image">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp 1x, images/flat-white-desktop@2x.webp 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp 1x, images/flat-white-tablet@2x.webp 2x" width="476" height="476">
+            <source type="image/webp" srcset="images/flat-white-mobile@1x.webp 1x, images/flat-white-mobile@2x.webp 2x" width="280" height="280">
+            <source media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png 1x, images/flat-white-desktop@2x.png 2x" width="600" height="600">
+            <source media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png 1x, images/flat-white-tablet@2x.png 2x" width="476" height="476">
+            <img class="hero__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png" width="280" height="280" alt="Кофе флэт уайт.">
+          </picture>
+        </div>
         <h2 class="hero__title">Декаф флэт уайт</h2>
         <p class="hero__gist">Новинка!</p>
         <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -84,7 +93,7 @@
         <p class="catalog__gist">Каталог</p>
         <h2 class="catalog__title">Каталог кофейных напитков</h2>
         <div class="catalog__wrapper-form">
-          <form action="https://echo.htmlacademy.ru/" method="get">
+          <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog__range">
               <legend class="catalog__subtitle catalog__subtitle--range">Цена</legend>
               <div class="range">
@@ -97,9 +106,9 @@
                   <span class="visually-hidden">Изменить максимальную цену.</span>
                 </button>
               </div>
-              <input class="range__price-from" type="number" name="price-from" placeholder="0" min="0" max="1000000" required>
+              <input class="range__price range__price--from" type="number" name="price-from" placeholder="0" min="0" max="1000000" required>
               <div class="range__dash"></div>
-              <input class="range__price-to" type="number" name="price-to" value="900" min="1" max="1000000" required>
+              <input class="range__price range__price--to" type="number" name="price-to" value="900" min="1" max="1000000" required>
             </fieldset>
             <fieldset class="catalog__radio">
               <legend class="catalog__subtitle">Наличие молока</legend>
@@ -107,29 +116,29 @@
                 <li>
                   <label class="radio">
                     <input class="radio__input visually-hidden" type="radio" name="milk" value="any" checked>
-                    <span class="radio__new-input"></span>
-                    <span>Неважно</span>
+                    <span class="radio__backup"></span>
+                    <span class="radio__text">Неважно</span>
                   </label>
                 </li>
                 <li>
                   <label class="radio">
                     <input class="radio__input visually-hidden" type="radio" name="milk" value="animal-milk">
-                    <span class="radio__new-input"></span>
-                    <span>Только животное</span>
+                    <span class="radio__backup"></span>
+                    <span class="radio__text">Только животное</span>
                   </label>
                 </li>
                 <li>
                   <label class="radio">
                     <input class="radio__input visually-hidden" type="radio" name="milk" value="plant-milk">
-                    <span class="radio__new-input"></span>
-                    <span>Только растительное</span>
+                    <span class="radio__backup"></span>
+                    <span class="radio__text">Только растительное</span>
                   </label>
                 </li>
                 <li>
                   <label class="radio">
                     <input class="radio__input visually-hidden" type="radio" name="milk" value="no-milk" disabled>
-                    <span class="radio__new-input"></span>
-                    <span>Без молока</span>
+                    <span class="radio__backup"></span>
+                    <span class="radio__text">Без молока</span>
                   </label>
                 </li>
               </ul>
@@ -140,36 +149,36 @@
                 <li>
                   <label class="checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="country" checked>
-                    <span class="checkbox__new-input"></span>
-                    <span>Бразилия</span>
+                    <span class="checkbox__backup"></span>
+                    <span class="checkbox__text">Бразилия</span>
                   </label>
                 </li>
                 <li>
                   <label class="checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="country">
-                    <span class="checkbox__new-input"></span>
-                    <span>"Эфиопия"</span>
+                    <span class="checkbox__backup"></span>
+                    <span class="checkbox__text">"Эфиопия"</span>
                   </label>
                 </li>
                 <li>
                   <label class="checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="country">
-                    <span class="checkbox__new-input"></span>
-                    <span>Колумбия</span>
+                    <span class="checkbox__backup"></span>
+                    <span class="checkbox__text">Колумбия</span>
                   </label>
                 </li>
                 <li>
                   <label class="checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="country" >
-                    <span class="checkbox__new-input"></span>
-                    <span>Коста-рика</span>
+                    <span class="checkbox__backup"></span>
+                    <span class="checkbox__text">Коста-рика</span>
                   </label>
                 </li>
                 <li>
                   <label class="checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="country" disabled>
-                    <span class="checkbox__new-input"></span>
-                    <span>Перу</span>
+                    <span class="checkbox__backup"></span>
+                    <span class="checkbox__text">Перу</span>
                   </label>
                 </li>
               </ul>
@@ -187,89 +196,83 @@
         <div class="catalog__wrapper-cards">
           <ul class="catalog__card-list">
             <li class="card">
-              <a href="#" class="card__title-link">
-                <h3 class="card__title"></h3>
-              </a>
+              <h3 class="card__title"><a href="#" class="card__title-link">Декаф Флэт Уайт</a></h3>
               <a href="#" class="card__image-link" tabindex="-1">
                 <picture>
-                  <img src="#" alt="Бежевая баночка кофе">
+                  <source type="image/webp" srcset="images/item-foto-1@1x.webp, images/item-foto-1@2x.webp 2x" width="130" height="188">
+                  <img src="images/item-foto-1@1x.png" srcset="images/item-foto-1@2x.png" width="130" height="188" alt="Бежевая баночка кофе.">
                 </picture>
               </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span>225₽</span>
-              <a href="#" class="button">В корзину</a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <span class="card__price">225₽</span>
+              <a href="#" class="card__button button"><span class="card__button-text">В корзину</span></a>
             </li>
             <li class="card">
-              <a href="#" class="card__title-link">
-                <h3 class="card__title"></h3>
-              </a>
+              <h3 class="card__title"><a href="#" class="card__title-link">Декаф Флэт Уайт</a></h3>
               <a href="#" class="card__image-link" tabindex="-1">
                 <picture>
-                  <img src="#" alt="Фиолетовая баночка кофе">
+                  <source type="image/webp" srcset="images/item-foto-2@1x.webp, images/item-foto-2@2x.webp 2x" width="130" height="188">
+                  <img src="images/item-foto-2@1x.png" srcset="images/item-foto-2@2x.png" width="130" height="188" alt="Фиолетовая баночка кофе.">
                 </picture>
               </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span>225₽</span>
-              <a href="#" class="button">В корзину</a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <span class="card__price">225₽</span>
+              <a href="#" class="card__button button"><span class="card__button-text">В корзину</span></a>
             </li>
             <li class="card">
-              <a href="#" class="card__title-link">
-                <h3 class="card__title"></h3>
-              </a>
+              <h3 class="card__title"><a href="#" class="card__title-link">Декаф Флэт Уайт</a></h3>
               <a href="#" class="card__image-link" tabindex="-1">
                 <picture>
-                  <img src="#" alt="Черная баночка кофе">
+                  <source type="image/webp" srcset="images/item-foto-3@1x.webp, images/item-foto-3@2x.webp 2x" width="130" height="188">
+                  <img src="images/item-foto-3@1x.png" srcset="images/item-foto-3@2x.png" width="130" height="188" alt="Черная баночка кофе.">
                 </picture>
               </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span>225₽</span>
-              <a href="#" class="button">В корзину</a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <span class="card__price">225₽</span>
+              <a href="#" class="card__button button"><span class="card__button-text">В корзину</span></a>
             </li>
             <li class="card">
-              <a href="#" class="card__title-link">
-                <h3 class="card__title"></h3>
-              </a>
+              <h3 class="card__title"><a href="#" class="card__title-link">Декаф Флэт Уайт</a></h3>
               <a href="#" class="card__image-link" tabindex="-1">
                 <picture>
-                  <img src="#" alt="Розовая баночка кофе">
+                  <source type="image/webp" srcset="images/item-foto-4@1x.webp, images/item-foto-4@2x.webp 2x" width="130" height="188">
+                  <img src="images/item-foto-4@1x.png" srcset="images/item-foto-4@2x.png" width="130" height="188" alt="Розовая баночка кофе.">
                 </picture>
               </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span>225₽</span>
-              <a href="#" class="button">В корзину</a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <span class="card__price">225₽</span>
+              <a href="#" class="card__button button"><span class="card__button-text">В корзину</span></a>
             </li>
             <li class="card">
-              <a href="#" class="card__title-link">
-                <h3 class="card__title"></h3>
-              </a>
+              <h3 class="card__title"><a href="#" class="card__title-link">Декаф Флэт Уайт</a></h3>
               <a href="#" class="card__image-link" tabindex="-1">
                 <picture>
-                  <img src="#" alt="Коричневая баночка кофе">
+                  <source type="image/webp" srcset="images/item-foto-5@1x.webp, images/item-foto-5@2x.webp 2x" width="130" height="188">
+                  <img src="images/item-foto-5@1x.png" srcset="images/item-foto-5@2x.png" width="130" height="188" alt="Коричневая баночка кофе.">
                 </picture>
               </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span>225₽</span>
-              <a href="#" class="button">В корзину</a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <span class="card__price">225₽</span>
+              <a href="#" class="card__button button"><span class="card__button-text">В корзину</span></a>
             </li>
             <li class="card">
-              <a href="#" class="card__title-link">
-                <h3 class="card__title"></h3>
-              </a>
+              <h3 class="card__title"><a href="#" class="card__title-link">Декаф Флэт Уайт</a></h3>
               <a href="#" class="card__image-link" tabindex="-1">
                 <picture>
-                  <img src="#" alt="Желтая баночка кофе">
+                  <source type="image/webp" srcset="images/item-foto-6@1x.webp, images/item-foto-6@2x.webp 2x" width="130" height="188">
+                  <img src="images/item-foto-6@1x.png" srcset="images/item-foto-6@2x.png" width="130" height="188" alt="Желтая баночка кофе.">
                 </picture>
               </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <span>225₽</span>
-              <a href="#" class="button">В корзину</a>
+              <p class="card__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <span class="card__price">225₽</span>
+              <a href="#" class="card__button button"><span class="card__button-text">В корзину</span></a>
             </li>
           </ul>
         </div>
         <div class="pagination">
           <ul class="pagination__list">
             <li>
-              <a href="#" class="pagination__link">Назад</a>
+              <a href="#" class="pagination__link pagination__link--right">&lsaquo;</a>
             </li>
             <li>
               <a href="#" class="pagination__link">1</a>
@@ -281,22 +284,28 @@
               <a href="#" class="pagination__link">3</a>
             </li>
             <li>
-              <a href="#" class="pagination__link">Вперёд</a>
+              <a href="#" class="pagination__link pagination__link--left">&rsaquo;</a>
             </li>
           </ul>
         </div>
       </section>
-      <section class="map" data-test="map">
-        <img src="#" alt="Наше месторасположение">
-      </section>
     </main>
-    <footer data-test="footer">
+    <footer class="footer" data-test="footer">
+      <section class="footer__map" data-test="map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="540">
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="480">
+          <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="320" height="420">
+          <source media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x" width="1440" height="540">
+          <source media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x" width="768" height="480">
+          <img class="footer__map-image" src="images/map-mobile@1x.jpg 1x" srcset="images/map-mobile@2x.jpg 2x" width="320" height="420" alt="Наше месторасположение.">
+        </picture>
+      </section>
       <div class="footer__wrapper">
-        <a href="#" class="footer__logo">
+        <a href="#" class="logo__footer">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-icon-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-icon-tablet.svg">
-            <img class="logo__icon" src="img/logo-icon-mobile.svg" alt="Кот победитель в плаще на фоне солнца." width="33" height="38">
+            <source media="(min-width: 768px)" srcset="images/logo-large.svg" width="170" height="36">
+            <img class="logo__icon" src="images/logo-medium.svg" alt="Логотип drink2go." width="82" height="36">
           </picture>
         </a>
         <section class="social">
@@ -314,51 +323,54 @@
           </ul>
         </section>
       </div>
-      <section class="footer__online-store">
+      <section class="footer__online">
         <h2 class="footer__title">Интернет-магазин</h2>
-        <ul>
+        <ul class="footer__online-list">
           <li>
-            <a href="#">Каталог</a>
+            <a href="#" class="footer__online-link">Каталог</a>
           </li>
           <li>
-            <a href="#">Доставка</a>
+            <a href="#" class="footer__online-link">Доставка</a>
           </li>
           <li>
-            <a href="#">Способы оплаты</a>
+            <a href="#" class="footer__online-link">Способы оплаты</a>
           </li>
           <li>
-            <a href="#">О нас</a>
+            <a href="#" class="footer__online-link">О нас</a>
           </li>
         </ul>
       </section>
       <section class="footer__media">
         <h2 class="footer__title">Медиа</h2>
-        <ul>
+        <ul class="footer__media-list">
           <li>
-            <a href="#">Блог</a>
+            <a href="#" class="footer__media-link">Блог</a>
           </li>
           <li>
-            <a href="#">Информация для сми</a>
+            <a href="#" class="footer__media-link">Информация для сми</a>
           </li>
           <li>
-            <a href="#">Правовая информация</a>
+            <a href="#" class="footer__media-link">Правовая информация</a>
           </li>
         </ul>
       </section>
       <section class="footer__contacts">
         <h2 class="footer__title">Контакты</h2>
-        <ul>
+        <ul class="footer__contacts-list">
           <li>
-            <a href="#">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+            <a href="#" class="footer__contacts-link">
+              <span class="footer__contacts-adress">Санкт-Петербург, набережная реки Карповки, дом 5</span>
+            </a>
           </li>
           <li>
-            <a href="#">+7 (999) 999-99-99</a>
+            <a href="tel:+79999999999" class="footer__contacts-link">
+              <span class="footer__contacts-tel">+7 (999) 999-99-99</span>
+            </a>
           </li>
         </ul>
       </section>
       <a href="https://htmlacademy.ru/" class="footer__academy-link" aria-label="Сайт HTML Academy">
         <span>Разработано в HTML Academy</span>
-        <!-- <svg></svg> -->
       </a>
     </footer>
   </body>

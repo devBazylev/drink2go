@@ -1,6 +1,44 @@
 @import "../global/mixins.scss";
 @import "../global/variables.scss";
 
+.social {
+  grid-area: 2/2/3/3;
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  height: 40px;
+  margin: 0 0 0 auto;
+  background-color: aqua;
+}
+
+.social__list {
+  @include reset-list;
+}
+
+.social__link-vkontakte {
+  width: 40px;
+  height: 40px;
+
+  &::before {
+    @include pseudo;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    mask-image: url("../../images/stack.svg#user");
+    background-color: var(--bg-darkest);
+  }
+}
+
+.social__link-pinteres {
+  width: 40px;
+  height: 40px;
+}
+
+.social__link-odnoklassniki {
+  width: 40px;
+  height: 40px;
+}
+
 // .social__link-vkontakte {
 //   display: block;
 //   width: 28px;

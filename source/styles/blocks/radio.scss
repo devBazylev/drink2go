@@ -1,6 +1,65 @@
 @import "../global/mixins.scss";
 @import "../global/variables.scss";
 
-.radio__list {
-  @include reset-list;
+.radio {
+  position: relative;
+  cursor: pointer;
+}
+
+.radio__backup {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border-muddy);
+  border-radius: 50%;
+  background-color: var(--bg-lightest);
+}
+
+.radio__text {
+  margin: 0 0 0 30px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.radio__input:checked + .radio__backup {
+  border: 2px solid var(--border-bright);
+
+  &::before {
+    @include pseudo;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--bg-dark);
+    border-radius: 50%;
+  }
+}
+
+.radio:hover .radio__backup,
+.radio__input:focus + .radio__backup {
+  border: 2px solid var(--border-brighter);
+
+  &::before {
+    content: "";
+    background-color: var(--bg-dark-alter);
+  }
+}
+
+.radio__input:disabled + .radio__backup {
+  border: 2px solid var(--border-cloudy);
+}
+
+.radio__input:disabled ~ .radio__text {
+  color: var(--common);
+}
+
+.radio__input:disabled:checked + .radio__backup {
+  border: 2px solid var(--border-cloudy);
+
+  &::before {
+    background-color: var(--bg-light);
+  }
 }

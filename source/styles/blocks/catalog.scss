@@ -15,6 +15,10 @@
   text-align: center;
 }
 
+.catalog__form {
+  display: grid;
+}
+
 .catalog__gist {
   order: -1;
   margin: 0 0 4px;
@@ -28,7 +32,8 @@
 
 .catalog__range {
   display: grid;
-  margin: 0;
+  width: 280px;
+  margin: 0 auto 30px;
   padding: 0;
   border: none;
 }
@@ -45,22 +50,63 @@
   grid-area: 1/1/2/4;
 }
 
-.catalog__milk-list,
-.catalog__country-list,
-.catalog__card-list {
+.catalog__milk-list {
   @include reset-list;
+  display: grid;
+  gap: 20px;
+  margin: 0 0 30px;
 }
 
 .catalog__radio {
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   padding: 0;
   border: none;
 }
 
 .catalog__checkbox {
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   padding: 0;
   border: none;
 }
 
+.catalog__country-list {
+  @include reset-list;
+  display: grid;
+  gap: 20px;
+  margin: 0 0 30px;
+}
 
+.catalog__card-list {
+  @include reset-list;
+  display: grid;
+  gap: 20px;
+}
+
+.catalog__button {
+  width: 280px;
+  margin: 0 auto 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.catalog__button--light {
+  margin: 0 auto 40px;
+  color: var(--bright);
+  background-color: var(--bg-lightest);
+}
+
+.catalog__button--light:disabled {
+  background-color: var(--bg-light);
+}
+
+.catalog__wrapper-select {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.catalog__wrapper-cards {
+  width: 280px;
+  margin: 0 auto 40px;
+}

@@ -1,2 +1,116 @@
 @import "../global/mixins.scss";
 @import "../global/variables.scss";
+
+// .footer {
+//   display: grid;
+// }
+
+.footer__map {
+  width: 100%;
+}
+
+.footer__map-image {
+  width: 100%;
+}
+
+.footer__wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.footer__title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--bright);
+  text-transform: uppercase;
+}
+
+.footer__online {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.footer__online-list,
+.footer__media-list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__online-link,
+.footer__media-link {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--main);
+  text-transform: uppercase;
+}
+
+.footer__media {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.footer__contacts {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.footer__contacts-list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__contacts-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--main);
+}
+
+.footer__contacts-adress {
+  display: flex;
+  justify-content: left;
+  gap: 6px;
+
+  &::before {
+    position: relative;
+    top: 2px;
+    @include pseudo;
+    width: 19px;
+    height: 16px;
+    background-image: url(../../images/icons/address-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.footer__contacts-tel {
+  display: flex;
+  justify-content: left;
+  gap: 6px;
+
+  &::before {
+    position: relative;
+    top: 2px;
+    @include pseudo;
+    width: 19px;
+    height: 16px;
+    background-image: url(../../images/icons/phone-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+// .footer__academy-link {
+
+// }

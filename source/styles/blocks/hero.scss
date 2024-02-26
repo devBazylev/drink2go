@@ -8,8 +8,24 @@
   background-color: var(--bg-bright);
 }
 
-.hero__image {
+.hero__wrapper-image {
   grid-area: 1/1/2/4;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.hero__image {
   margin: 0 auto 10px;
 }
 

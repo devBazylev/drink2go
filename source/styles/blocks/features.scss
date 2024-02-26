@@ -37,8 +37,7 @@
 
 .features__item--clock {
   &::before{
-    content: "";
-    display: block;
+    @include pseudo;
     width: 52px;
     height: 56px;
     margin: 0 auto;
@@ -48,8 +47,7 @@
 
 .features__item--pocket {
   &::before{
-    content: "";
-    display: block;
+    @include pseudo;
     width: 52px;
     height: 56px;
     margin: 0 auto;
@@ -59,8 +57,7 @@
 
 .features__item--energy {
   &::before{
-    content: "";
-    display: block;
+    @include pseudo;
     width: 52px;
     height: 56px;
     margin: 0 auto;
@@ -70,8 +67,7 @@
 
 .features__item--leaf {
   &::before{
-    content: "";
-    display: block;
+    @include pseudo;
     width: 52px;
     height: 56px;
     margin: 0 auto;

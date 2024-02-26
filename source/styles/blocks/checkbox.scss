@@ -1,6 +1,65 @@
 @import "../global/mixins.scss";
 @import "../global/variables.scss";
 
-.checkbox__list {
-  @include reset-list;
+.checkbox {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox__backup {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  border: 2px solid var(--bg-darker);
+  border-radius: 12px 12px 12px 12px;
+  background-color: var(--bg-darker);
+
+  &::before {
+    @include pseudo;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-lightest);
+    border-radius: 50%;
+  }
+}
+
+.checkbox__text {
+  margin: 0 0 0 55px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.checkbox__input:checked + .checkbox__backup {
+  background-color: var(--bg-dark);
+  border-color: var(--border-bright);
+
+  &::before {
+    left: 18px;
+  }
+}
+
+.checkbox:hover .checkbox__backup,
+.checkbox__input:focus + .checkbox__backup {
+  border-color: var(--border-brighter);
+  background-color: var(--bg-dark-alter);
+}
+
+.checkbox__input:disabled + .checkbox__backup {
+  border: 2px solid var(--border-cloudy);
+  background-color: var(--bg-light);
+}
+
+.checkbox__input:disabled ~ .checkbox__text {
+  color: var(--common);
+}
+
+.checkbox__input:disabled:checked + .checkbox__backup {
+  border: 2px solid var(--border-cloudy);
+
+  &::before {
+    left: 18px;
+  }
 }

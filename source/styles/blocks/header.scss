@@ -105,8 +105,7 @@
 
 .header__link--current::after {
   @media (min-width: $tablet) {
-    content: "";
-    display: block;
+    @include pseudo;
     width: 100%;
     box-shadow: 0 10px 0 1px var(--border-bright);
   }
@@ -122,7 +121,7 @@
   align-items: center;
 
   &::before {
-    content: "";
+    @include pseudo;
     width: 16px;
     height: 16px;
     margin: auto;
@@ -137,8 +136,7 @@
   align-items: center;
 
   &::before {
-    content: "";
-    // display: block;
+    @include pseudo;
     width: 16px;
     height: 16px;
     margin: auto;
@@ -163,7 +161,7 @@
 }
 
 .header__navigation--closed + .header__toggle::before {
-  content: "";
+  @include pseudo;
   position: absolute;
   top: 22px;
   left: 22px;
@@ -175,7 +173,7 @@
 
 .header__navigation--opened + .header__toggle::before,
 .header__navigation--opened + .header__toggle::after {
-  content: "";
+  @include pseudo;
   position: absolute;
   top: 29px;
   left: 21px;

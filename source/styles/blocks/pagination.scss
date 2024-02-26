@@ -1,6 +1,38 @@
 @import "../global/mixins.scss";
 @import "../global/variables.scss";
 
+.pagination {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .pagination__list {
   @include reset-list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--bright);
+  background-color: var(--bg-lightest);
+  border-radius: 4px;
+}
+
+.pagination__link--current {
+  font-weight: 600;
+  color: var(--main);
+  background-color: var(--bg-lighter);
+}
+
+.pagination__link--right,
+.pagination__link--left {
+  font-size: 25px;
+  padding: 0 0 2px;
 }
