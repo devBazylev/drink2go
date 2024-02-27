@@ -6,6 +6,10 @@
   width: 280px;
   padding: 40px 20px 20px;
   background-color: var(--bg-lightest);
+
+  @media (min-width: $tablet) {
+    width: 349px;
+  }
 }
 
 .card__title {
@@ -58,3 +62,9 @@
     background-image: url(../../images/icons/basket-plus.svg);
   }
 }
+
+
+// .catalog__item:hover,
+// .catalog__item:focus-within {
+//   box-shadow: 0 5px 15px 0 rgb($base-black, 0.15);
+// }

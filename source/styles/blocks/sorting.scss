@@ -1,0 +1,63 @@
+@import "../global/mixins.scss";
+@import "../global/variables.scss";
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 16px;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 282px;
+    margin: 0 40px 0 auto;
+  }
+}
+
+.sorting__text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.sorting__panel {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 165px;
+  height: 32px;
+  padding: 4px 9px;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: var(--bright);
+  background-color: var(--bg-lighter);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.25em) 13px;
+  background-size: 10px 6px;
+  background-image: url(../../images/icons/arrow-down.svg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sorting__panel:hover,
+.sorting__panel:focus {
+  background-color: var(--bg-lavender);
+}
+
+select:active:not([multiple]) {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.25em) 13px;
+  background-size: 10px 6px;
+  background-image: url(../../images/icons/arrow-up.svg);
+}
+

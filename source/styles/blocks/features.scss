@@ -4,14 +4,30 @@
 .features {
   display: grid;
   padding: 50px 20px 60px;
+
+  @media (min-width: $tablet) {
+    padding: 60px 20px 100px;
+  }
 }
 
 .features__title {
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    width: 728px;
+    font-size: 42px;
+    line-height: 64px;
+    margin: 0 auto 60px;
+  }
+}
+
+.features__title--capitalize {
+  text-transform: capitalize;
 }
 
 .features__gist {
@@ -27,50 +43,63 @@
 
 .features__list {
   @include reset-list;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 728px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 30px;
+  }
 }
 
 .features__item {
   width: 100%;
   min-height: 142px;
   padding: 32px 0 0;
-}
 
-.features__item--clock {
+  @media (min-width: $tablet) {
+    display: grid;
+    gap: 10px 20px;
+    width: 339px;
+    min-height: 94px;
+    padding: 0 11px;
+  }
+
   &::before{
     @include pseudo;
     width: 52px;
     height: 56px;
-    margin: 0 auto;
+    margin: 0 auto 10px;
+
+    @media (min-width: $tablet) {
+      grid-area: 1/1/3/2;
+      margin: 0;
+    }
+  }
+}
+
+.features__item--clock {
+  &::before{
     background-image: url("../../images/stack.svg#clock");
   }
 }
 
 .features__item--pocket {
   &::before{
-    @include pseudo;
-    width: 52px;
-    height: 56px;
-    margin: 0 auto;
     background-image: url("../../images/stack.svg#pocket");
   }
 }
 
 .features__item--energy {
   &::before{
-    @include pseudo;
-    width: 52px;
-    height: 56px;
-    margin: 0 auto;
     background-image: url("../../images/stack.svg#energy");
   }
 }
 
 .features__item--leaf {
   &::before{
-    @include pseudo;
-    width: 52px;
-    height: 56px;
-    margin: 0 auto;
     background-image: url("../../images/stack.svg#leaf");
   }
 }
@@ -81,10 +110,26 @@
   font-weight: 700;
   line-height: 32px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    grid-area: 1/2/2/3;
+    margin: 0;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: left;
+  }
 }
 
 .features__text {
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    grid-area: 2/2/3/3;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
 }

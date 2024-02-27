@@ -8,9 +8,7 @@
     <!-- <link rel="icon" href="img/favicons/favicon-152.svg" type="image/svg+xml"> -->
     <!-- <link rel="manifest" href="manifest.webmanifest"> -->
     <link rel="stylesheet" href="styles/styles.css">
-    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <script src="scripts/index.js" defer></script>
-    <!-- <script src="js/webp.js"></script> -->
   </head>
   <body class="page__body">
     <header class="header" data-test="header">
@@ -22,44 +20,55 @@
         </picture>
       </a>
       <h1 class="header__title visually-hidden">Интернет-магазин кофейных напитков</h1>
-      <a href="#" class="header__account-link">
-        <span class="header__account-gist visually-hidden">Войти</span>
-      </a>
-      <a href="#" class="header__basket-link">
-        <span class="header__basket-gist visually-hidden">Корзина</span>
-      </a>
+      <nav class="mini-navigation">
+        <ul class="mini-navigation__list">
+          <li class="mini-navigation__item">
+            <a href="#" class="mini-navigation__account-link">
+              <span class="header__account-gist visually-hidden">Войти</span>
+            </a>
+          </li>
+          <li class="mini-navigation__item">
+            <a href="#" class="mini-navigation__basket-link">
+              <span class="header__basket-gist visually-hidden">Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <nav class="header__navigation header__navigation--closed">
         <ul class="header__list">
-          <li>
-            <a href="#" class="header__link header__link--current">Главная</a>
+          <li class="header__item header__item--current">
+            <a href="#" class="header__link">Главная</a>
           </li>
-          <li>
+          <li class="header__item">
             <a href="#" class="header__link">Каталог</a>
           </li>
-          <li>
+          <li class="header__item">
             <a href="#" class="header__link">Доставка</a>
           </li>
-          <li>
+          <li class="header__item">
             <a href="#" class="header__link">О нас</a>
           </li>
         </ul>
       </nav>
-      <button class="header__toggle" type="button">
+      <button class="header__toggle js-toggle-button" type="button">
         <span class="visually-hidden">Открыть навигацию</span>
       </button>
     </header>
-    <main>
+    <main class="page__main">
       <section class="hero" data-test="hero">
-        <div class="hero__wrapper-image">
+        <div class="slider">
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp 1x, images/flat-white-desktop@2x.webp 2x" width="600" height="600">
             <source type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp 1x, images/flat-white-tablet@2x.webp 2x" width="476" height="476">
             <source type="image/webp" srcset="images/flat-white-mobile@1x.webp 1x, images/flat-white-mobile@2x.webp 2x" width="280" height="280">
             <source media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png 1x, images/flat-white-desktop@2x.png 2x" width="600" height="600">
             <source media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png 1x, images/flat-white-tablet@2x.png 2x" width="476" height="476">
-            <img class="hero__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png" width="280" height="280" alt="Кофе флэт уайт.">
+            <img class="slider__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png" width="280" height="280" alt="Кофе флэт уайт.">
           </picture>
         </div>
+        <button class="slider-button-prev" type="button"></button>
+        <button class="slider-button-next" type="button"></button>
+        <button class="slider-pagination" type="button"></button>
         <h2 class="hero__title">Декаф флэт уайт</h2>
         <p class="hero__gist">Новинка!</p>
         <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -68,7 +77,7 @@
         <a href="#" class="hero__button button">Заказать</a>
       </section>
       <section class="features" data-test="features">
-        <h2 class="features__title">Главные причины выбрать <span>drink2go</span></h2>
+        <h2 class="features__title">Главные причины выбрать <span class="features__title--capitalize">drink2go</span></h2>
         <p class="features__gist">Преимущества</p>
         <ul class="features__list">
           <li class="features__item features__item--clock">
@@ -188,10 +197,12 @@
           </form>
         </div>
         <div class="catalog__wrapper-select">
-          <span>Сортировка</span>
-          <select class="sorting-panel" aria-label="Сортировка" name="sorting-panel">
-            <option value="default">по умолчанию</option>
-          </select>
+          <label class="sorting">
+            <span class="sorting__text">Сортировка:</span>
+            <select select class="sorting__panel" aria-label="Сортировка" name="sorting-panel">
+              <option value="default">по умолчанию</option>
+            </select>
+          </label>
         </div>
         <div class="catalog__wrapper-cards">
           <ul class="catalog__card-list">
@@ -272,7 +283,10 @@
         <div class="pagination">
           <ul class="pagination__list">
             <li>
-              <a href="#" class="pagination__link pagination__link--right">&lsaquo;</a>
+              <a href="#" class="pagination__link pagination__link--right">
+                <span class="pagination__back">Назад</span>
+                <span class="pagination__left"></span>
+              </a>
             </li>
             <li>
               <a href="#" class="pagination__link">1</a>
@@ -284,23 +298,26 @@
               <a href="#" class="pagination__link">3</a>
             </li>
             <li>
-              <a href="#" class="pagination__link pagination__link--left">&rsaquo;</a>
+              <a href="#" class="pagination__link pagination__link--left">
+                <span class="pagination__forward">Вперёд</span>
+                <span class="pagination__right"></span>
+              </a>
             </li>
           </ul>
         </div>
       </section>
-    </main>
-    <footer class="footer" data-test="footer">
-      <section class="footer__map" data-test="map">
+      <section class="page__map" data-test="map">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="540">
           <source type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="480">
           <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="320" height="420">
           <source media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x" width="1440" height="540">
           <source media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x" width="768" height="480">
-          <img class="footer__map-image" src="images/map-mobile@1x.jpg 1x" srcset="images/map-mobile@2x.jpg 2x" width="320" height="420" alt="Наше месторасположение.">
+          <img class="page__map-image" src="images/map-mobile@1x.jpg 1x" srcset="images/map-mobile@2x.jpg 2x" width="320" height="420" alt="Наше месторасположение.">
         </picture>
       </section>
+    </main>
+    <footer class="footer" data-test="footer">
       <div class="footer__wrapper">
         <a href="#" class="logo__footer">
           <picture>
@@ -312,13 +329,13 @@
           <h2 class="visually-hidden">Соцсети</h2>
           <ul class="social__list">
             <li>
-              <a class="social__link-vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте"></a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте"></a>
             </li>
             <li>
-              <a class="social__link-pinteres" href="#" aria-label="Пинтерест"></a>
+              <a class="social__link social__link--pinteres" href="#" aria-label="Пинтерест"></a>
             </li>
             <li>
-              <a class="social__link-odnoklassniki" href="#" aria-label="Ок"></a>
+              <a class="social__link social__link--ok" href="#" aria-label="Ок"></a>
             </li>
           </ul>
         </section>
@@ -369,8 +386,8 @@
           </li>
         </ul>
       </section>
-      <a href="https://htmlacademy.ru/" class="footer__academy-link" aria-label="Сайт HTML Academy">
-        <span>Разработано в HTML Academy</span>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__academy-link" aria-label="Сайт HTML Academy">
+        <span class="footer__academy-text">Разработано в HTML Academy</span>
       </a>
     </footer>
   </body>

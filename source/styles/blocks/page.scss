@@ -8,7 +8,7 @@
 .page__body {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  // flex-grow: 1;
   font-family: "Montserrat";
   font-weight: 400;
   font-style: normal;
@@ -27,14 +27,22 @@
   }
 }
 
-.page__wrapper {
-  padding-left: $small;
-  padding-right: $small;
+.page__main {
+  flex-grow: 1;
+}
 
-  @media (min-width: $desktop) {
-    padding-left: $big;
-    padding-right: $big;
-  }
+// .page__wrapper {
+//   min-height: 100%;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.page__map {
+  width: 100%;
+}
+
+.page__map-image {
+  width: 100%;
 }
 
 // .page__map {

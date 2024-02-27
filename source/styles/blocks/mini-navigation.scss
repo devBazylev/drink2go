@@ -1,0 +1,62 @@
+@import "../global/mixins.scss";
+@import "../global/variables.scss";
+
+.mini-navigation {
+  grid-area: 1/2/2/3;
+
+  @media (min-width: $tablet) {
+    grid-area: 1/3/2/4;
+  }
+}
+
+.mini-navigation__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mini-navigation__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet) {
+    height: 80px;
+  }
+}
+
+.mini-navigation__item:last-child {
+  @media (min-width: $tablet) {
+    margin: 0 20px 0 0;
+  }
+}
+
+.mini-navigation__account-link {
+  display: inline-flex;
+
+  &::before {
+    @include pseudo;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    mask-image: url("../../images/stack.svg#user");
+    background-color: var(--bg-darkest);
+  }
+}
+
+.mini-navigation__basket-link {
+  display: inline-flex;
+
+  &::before {
+    @include pseudo;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    mask-image: url("../../images/stack.svg#basket");
+    background-color: var(--bg-darkest);
+  }
+}

@@ -1,0 +1,64 @@
+@import "../global/mixins.scss";
+@import "../global/variables.scss";
+
+.slider {
+  grid-area: 1/2/2/4;
+  width: 280px;
+  height: 300px;
+  padding: 20px 0 0;
+  margin: 0 auto 10px;
+
+  @media (min-width: $tablet) {
+    grid-area: 5/2/7/4;
+    width: 476px;
+    height: 476px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.slider-button-prev,
+.slider-button-next {
+  display: block;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: var(--bg-bright);
+
+  &::before {
+    @include pseudo;
+    width: 11px;
+    height: 20px;
+    margin: auto;
+    background-color: var(--bg-dark);
+  }
+
+  @media (min-width: $tablet) {
+    height: 640px;
+  }
+}
+
+.slider-button-prev {
+  grid-area: 1/1/6/2;
+
+  &::before {
+    mask-image: url("../../images/stack.svg#left-arrow");
+  }
+}
+
+.slider-button-next {
+  grid-area: 1/4/6/5;
+
+  &::before {
+    mask-image: url("../../images/stack.svg#right-arrow");
+  }
+}
+
+.slider-pagination {
+  display: none;
+}
+

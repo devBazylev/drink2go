@@ -4,12 +4,22 @@
 .pagination {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 768px;
+    margin: 0 auto;
+  }
 }
 
 .pagination__list {
   @include reset-list;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    width: 395px;
+    margin: 0 20px 0 auto;
+  }
 }
 
 .pagination__link {
@@ -35,4 +45,42 @@
 .pagination__link--left {
   font-size: 25px;
   padding: 0 0 2px;
+
+  @media (min-width: $tablet) {
+    width: 91px;
+  }
 }
+
+.pagination__back,
+.pagination__forward {
+  display: none;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.pagination__left {
+  width: 6px;
+  height: 10px;
+  mask-image: url("../../images/stack.svg#left-pagination");
+  background-color: var(--bg-dark);
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.pagination__right {
+  width: 6px;
+  height: 10px;
+  mask-image: url("../../images/stack.svg#right-pagination");
+  background-color: var(--bg-dark);
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+

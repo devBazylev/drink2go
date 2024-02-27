@@ -2,9 +2,14 @@
 @import "../global/variables.scss";
 
 .logo {
+  grid-area: 1/1/2/2;
   display: inline-flex;
   align-items: center;
   padding: 10px 20px 10px;
+
+  @media (min-width: $tablet) {
+    padding: 20px;
+  }
 }
 
 .logo__footer {
