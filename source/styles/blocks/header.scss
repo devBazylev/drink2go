@@ -132,8 +132,23 @@
   }
 }
 
-.header__item--current .header__link {
+.header__link:hover,
+.header__link:focus {
   color: var(--bright);
+}
+
+.header__link:active {
+  background-color: var(--bg-lavender);
+
+  @media (min-width: $tablet) {
+    color: var(--bright);
+  }
+}
+
+.header__item--current .header__link {
+  @media (min-width: $tablet) {
+    color: var(--bright);
+  }
 }
 
 .header__toggle {
@@ -149,6 +164,10 @@
   @media (min-width: $tablet) {
     display: none;
   }
+}
+
+.header__toggle:active {
+  background-color: var(--bg-lavender);
 }
 
 .header__navigation--closed + .header__toggle::before {

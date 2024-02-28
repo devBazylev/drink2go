@@ -25,26 +25,44 @@
   align-items: center;
   width: 40px;
   height: 40px;
-
-  &::before {
-    @include pseudo;
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    background-color: var(--bg-darker);
-  }
+  border-radius: 4px;
 }
 
-.social__link--vkontakte::before {
+.social__link-stuff {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  background-color: var(--bg-darker);
+}
+
+.social__link-stuff--vkontakte {
   mask-image: url("../../images/stack.svg#vk");
 }
 
-.social__link--pinteres::before {
-    width: 22px;
-    height: 22px;
-    mask-image: url("../../images/stack.svg#pinterest");
+.social__link-stuff--pinteres {
+  mask-image: url("../../images/stack.svg#pinterest");
 }
 
-.social__link--ok::before {
-    mask-image: url("../../images/stack.svg#ok");
+.social__link-stuff--ok {
+  mask-image: url("../../images/stack.svg#ok");
 }
+
+
+.social__link:hover,
+.social__link:focus {
+  background-color: var(--bg-lavender);
+}
+
+.social__link:active {
+  background-color: var(--bg-dark-alter);
+}
+
+.social__link:hover .social__link-stuff,
+.social__link:focus .social__link-stuff {
+  background-color: var(--bg-dark);
+}
+
+.social__link:active .social__link-stuff {
+  background-color: var(--bg-dark);
+}
+

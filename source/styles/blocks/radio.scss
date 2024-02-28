@@ -15,6 +15,16 @@
   border: 2px solid var(--border-muddy);
   border-radius: 50%;
   background-color: var(--bg-lightest);
+
+  &::before {
+    @include pseudo;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
 }
 
 .radio__text {
@@ -27,14 +37,7 @@
   border: 2px solid var(--border-bright);
 
   &::before {
-    @include pseudo;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 16px;
-    height: 16px;
     background-color: var(--bg-dark);
-    border-radius: 50%;
   }
 }
 
@@ -43,7 +46,6 @@
   border: 2px solid var(--border-brighter);
 
   &::before {
-    content: "";
     background-color: var(--bg-dark-alter);
   }
 }

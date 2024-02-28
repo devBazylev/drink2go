@@ -18,6 +18,8 @@
   --common: var(--grey);
   --light: var(--white);
   --bright: var(--violet);
+  --casual: var(--violet-light);
+  --rare: var(--violet-dark);
   --bg-lightest: var(--white);
   --bg-lighter: var(--grey-lightest);
   --bg-light: var(--grey-light);
@@ -34,4 +36,5 @@
   --border-brighter: var(--violet-light);
   --border-muddy: var(--grey);
   --border-cloudy: var(--grey-light);
+  --border-very-bright: var(--violet-dark);
 }

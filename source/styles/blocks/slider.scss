@@ -64,6 +64,14 @@
   }
 }
 
+.slider-button-prev:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+}
+
+.slider-button-next:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.00) 0%, rgba(120, 89, 207, 0.25) 100%);
+}
+
 .slider-pagination {
   display: none;
 

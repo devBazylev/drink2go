@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $desktop) {
-    grid-area: 5/2/6/3;
+    grid-area: 5/3/6/4;
     width: 1011px;
   }
 }
@@ -46,10 +46,38 @@
   border-radius: 4px;
 }
 
+.pagination__link:hover,
+.pagination__link:focus {
+  color: var(--light);
+  background-color: var(--bg-brighter);
+}
+
+.pagination__link:active {
+  color: var(--light);
+  background-color: var(--bg-dark-more);
+}
+
+.pagination__link:disabled {
+  color: var(--light);
+  background-color: var(--bg-light);
+}
+
 .pagination__link--current {
   font-weight: 600;
   color: var(--main);
   background-color: var(--bg-lighter);
+  cursor: default;
+}
+
+.pagination__link--current:hover,
+.pagination__link--current:focus {
+  color: var(--main);
+  background-color: transparent;
+}
+
+.pagination__link--current:active {
+  color: var(--main);
+  background-color: transparent;
 }
 
 .pagination__link--right,

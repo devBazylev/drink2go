@@ -72,7 +72,6 @@
         </div>
         <button class="slider-button-prev" type="button"></button>
         <button class="slider-button-next" type="button"></button>
-        <button class="slider-pagination" type="button"></button>
         <div class="slider-pagination"></div>
         <h2 class="hero__title">Декаф флэт уайт</h2>
         <p class="hero__gist">Новинка!</p>
@@ -114,10 +113,10 @@
                 <div class="range__bar"></div>
                 <div class="range__scale"></div>
                 <button class="range__toggle range__toggle--min" type="button">
-                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                  <span class="range__toggle-stuff" aria-label="Изменить минимальную цену"></span>
                 </button>
                 <button class="range__toggle range__toggle--max" type="button">
-                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                  <span class="range__toggle-stuff" aria-label="Изменить максимальную цену"></span>
                 </button>
               </div>
               <input class="range__price range__price--from" type="number" name="price-from" placeholder="0" min="0" max="1000000" required>
@@ -335,13 +334,19 @@
           <h2 class="visually-hidden">Соцсети</h2>
           <ul class="social__list">
             <li>
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте"></a>
+              <a class="social__link" href="https://vk.com/htmlacademy">
+                <span class="social__link-stuff social__link-stuff--vkontakte" aria-label="Вконтакте"></span>
+              </a>
             </li>
             <li>
-              <a class="social__link social__link--pinteres" href="#" aria-label="Пинтерест"></a>
+              <a class="social__link" href="#">
+                <span class="social__link-stuff social__link-stuff--pinteres" aria-label="Пинтерест"></span>
+              </a>
             </li>
             <li>
-              <a class="social__link social__link--ok" href="#" aria-label="Ок"></a>
+              <a class="social__link" href="#">
+                <span class="social__link-stuff social__link-stuff--ok" aria-label="Ок"></span>
+              </a>
             </li>
           </ul>
         </section>
