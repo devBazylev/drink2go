@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>HTML Academy: Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/montserrat-400.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-500.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-600.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-700.woff2" as="font">
     <!-- <link rel="icon" href="favicon.ico"> -->
     <!-- <link rel="icon" href="img/favicons/favicon-152.svg" type="image/svg+xml"> -->
     <!-- <link rel="manifest" href="manifest.webmanifest"> -->
@@ -19,17 +23,17 @@
           <img class="logo__icon" src="images/logo-small.svg" alt="Логотип drink2go." width="32" height="36">
         </picture>
       </a>
-      <h1 class="header__title visually-hidden">Интернет-магазин кофейных напитков</h1>
+      <h1 class="header__title">Интернет-магазин <br>кофейных напитков</h1>
       <nav class="mini-navigation">
         <ul class="mini-navigation__list">
           <li class="mini-navigation__item">
             <a href="#" class="mini-navigation__account-link">
-              <span class="header__account-gist visually-hidden">Войти</span>
+              <span class="mini-navigation__account-gist">Войти</span>
             </a>
           </li>
           <li class="mini-navigation__item">
             <a href="#" class="mini-navigation__basket-link">
-              <span class="header__basket-gist visually-hidden">Корзина</span>
+              <span class="mini-navigation__basket-gist">Корзина</span>
             </a>
           </li>
         </ul>
@@ -69,6 +73,7 @@
         <button class="slider-button-prev" type="button"></button>
         <button class="slider-button-next" type="button"></button>
         <button class="slider-pagination" type="button"></button>
+        <div class="slider-pagination"></div>
         <h2 class="hero__title">Декаф флэт уайт</h2>
         <p class="hero__gist">Новинка!</p>
         <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -325,6 +330,7 @@
             <img class="logo__icon" src="images/logo-medium.svg" alt="Логотип drink2go." width="82" height="36">
           </picture>
         </a>
+        <span class="logo__text">Интернет-магазин кофейных напитков</span>
         <section class="social">
           <h2 class="visually-hidden">Соцсети</h2>
           <ul class="social__list">

@@ -13,11 +13,26 @@
 
   @media (min-width: $tablet) {
     grid-template-columns: 122px 1fr auto;
+    width: 768px;
     min-height: 80px;
   }
 
   @media (min-width: $desktop) {
-    width: 100%;
+    grid-template-columns: 230px 126px 1fr 1fr;
+    width: 1440px;
+  }
+}
+
+.header__title {
+  display: none;
+
+  @media (min-width: $desktop) {
+    grid-area: 1/2/2/3;
+    display: block;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
   }
 }
 
@@ -31,6 +46,12 @@
     grid-area: 1/2/2/3;
     min-width: 399px;
     margin: 0 auto 0 67px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 1/3/2/4;
+    min-width: 459px;
+    margin: 0 auto 0 162px;
   }
 }
 
@@ -58,6 +79,10 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 20px;
   }
 }
 

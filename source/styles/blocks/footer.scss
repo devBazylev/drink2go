@@ -9,7 +9,16 @@
   @media (min-width: $tablet) {
     grid-template-columns: 223px 222px 223px;
     gap: 0 30px;
+    width: 768px;
+    margin: 0 auto;
     padding: 0 20px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 40px;
   }
 }
 
@@ -23,6 +32,12 @@
     grid-area: 1/1/2/4;
     padding: 42px 0 20px;
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 1/1/2/2;
+    padding: 0;
+    display: block;
   }
 }
 
@@ -43,6 +58,10 @@
     grid-area: 2/1/3/2;
     padding: 0;
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 1/2/2/3;
   }
 }
 
@@ -72,6 +91,10 @@
     padding: 0;
     border: none;
   }
+
+  @media (min-width: $desktop) {
+    grid-area: 1/3/2/4;
+  }
 }
 
 .footer__contacts {
@@ -82,6 +105,10 @@
     grid-area: 2/3/3/4;
     padding: 0;
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 1/4/2/5;
   }
 }
 
@@ -150,6 +177,10 @@
     grid-area: 3/1/4/4;
     padding: 0;
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 2/1/3/5;
   }
 
   &::after {

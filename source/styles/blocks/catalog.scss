@@ -9,6 +9,12 @@
   @media (min-width: $tablet) {
     padding: 80px 0 90px;
   }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 318px 1011px;
+    gap: 0 30px;
+    padding: 100px 40px 120px;
+  }
 }
 
 .catalog__title {
@@ -25,12 +31,22 @@
     font-size: 42px;
     line-height: 64px;
   }
+
+  @media (min-width: $desktop) {
+    grid-area: 2/1/3/3;
+  }
 }
 
 .catalog__wrapper-form {
   @media (min-width: $tablet) {
     width: 728px;
     margin: 0 auto 40px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 3/1/5/2;
+    width: 318px;
+    margin: 0;
   }
 }
 
@@ -40,6 +56,12 @@
   @media (min-width: $tablet) {
     grid-template-columns: 223px 222px 223px;
     gap: 40px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
+    width: 318px;
+    gap: 0 20px;
   }
 }
 
@@ -52,6 +74,10 @@
   color: var(--bright);
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $desktop) {
+    grid-area: 1/1/2/3;
+  }
 }
 
 .catalog__range {
@@ -66,6 +92,13 @@
     width: 223px;
     margin: 0;
     padding: 0 0 144px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 1/1/2/3;
+    width: 318px;
+    padding: 0;
+    margin: 0 0 30px;
   }
 }
 
@@ -86,6 +119,10 @@
   display: grid;
   gap: 20px;
   margin: 0 0 30px;
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
 }
 
 .catalog__radio {
@@ -96,6 +133,12 @@
 
   @media (min-width: $tablet) {
     grid-area: 1/2/2/3;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 2/1/3/3;
+    width: 318px;
+    margin: 0 0 30px;
   }
 }
 
@@ -115,6 +158,12 @@
   @media (min-width: $tablet) {
     grid-area: 1/3/2/4;
   }
+
+  @media (min-width: $desktop) {
+    grid-area: 3/1/4/3;
+    width: 318px;
+    margin: 0 0 40px;
+  }
 }
 
 .catalog__card-list {
@@ -126,10 +175,16 @@
     grid-template-columns: 349px 349px;
     gap: 30px;
   }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 317px 317px 317px;
+    width: 1011px;
+  }
 }
 
 .catalog__button {
   width: 280px;
+  padding: 0;
   margin: 0 auto 20px;
   font-size: 16px;
   line-height: 24px;
@@ -138,6 +193,12 @@
     grid-area: 2/1/3/4;
     width: 137px;
     margin: 0 auto 0 226px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 4/1/5/2;
+    width: 149px;
+    margin: 0;
   }
 }
 
@@ -150,6 +211,12 @@
     grid-area: 2/1/3/4;
     width: 120px;
     margin: 0 226px 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 4/2/5/3;
+    width: 149px;
+    margin: 0;
   }
 }
 
@@ -165,6 +232,11 @@
     width: 768px;
     margin: 0 auto 26px ;
   }
+
+  @media (min-width: $desktop) {
+    grid-area: 3/2/4/3;
+    width: 1011px;
+  }
 }
 
 .catalog__wrapper-cards {
@@ -174,5 +246,11 @@
   @media (min-width: $tablet) {
     width: 728px;
     margin: 0 auto 70px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: 4/2/5/3;
+    width: 1011px;
+    margin: 0 auto 60px;
   }
 }

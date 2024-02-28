@@ -9,6 +9,10 @@
   @media (min-width: $tablet) {
     width: 223px;
   }
+
+  @media (min-width: $desktop) {
+    width: 318px;
+  }
 }
 
 .range__bar {
@@ -64,6 +68,10 @@
   @media (min-width: $tablet) {
     width: 87px;
     height: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 134px;
   }
 }
 
