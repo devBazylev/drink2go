@@ -180,18 +180,18 @@
   }
 
   &::before {
+    @include pseudo;
     position: relative;
     top: 2px;
-    @include pseudo;
     width: 19px;
     height: 16px;
-    background-image: url(../../images/icons/address-icon.svg);
+    background-image: url("../../images/icons/address-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
     @media (min-width: $tablet) {
-      top: 0px;
+      top: 0;
       width: 24px;
       height: 20px;
     }
@@ -208,13 +208,13 @@
   justify-content: left;
 
   &::before {
+    @include pseudo;
     position: relative;
     top: 1px;
     right: 3px;
-    @include pseudo;
     width: 19px;
     height: 16px;
-    background-image: url(../../images/icons/phone-icon.svg);
+    background-image: url("../../images/icons/phone-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -251,9 +251,9 @@
   display: inline-flex;
 
   &::after {
+    @include pseudo;
     position: relative;
     left: 4px;
-    @include pseudo;
     width: 12px;
     height: 16px;
     mask-image: url("../../images/stack.svg#academy");
@@ -278,5 +278,3 @@
 .footer__academy-link:active .footer__academy-text::after {
   background-color: var(--bg-dark-more);
 }
-
-

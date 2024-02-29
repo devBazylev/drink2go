@@ -68,7 +68,7 @@
   margin: -1px 25% auto auto;
   mask-image: url("../../images/stack.svg#left-arrow");
 
-  @media (min-width:$tablet) {
+  @media (min-width: $tablet) {
     margin: -1px 44% auto auto;
   }
 }
@@ -77,17 +77,17 @@
   margin: -1px auto auto 25%;
   mask-image: url("../../images/stack.svg#right-arrow");
 
-  @media (min-width:$tablet) {
+  @media (min-width: $tablet) {
     margin: -1px auto auto 44%;
   }
 }
 
 .slider-button-prev:active {
-  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0) 100%);
 }
 
 .slider-button-next:active {
-  background: linear-gradient(90deg, rgba(120, 89, 207, 0.00) 0%, rgba(120, 89, 207, 0.25) 100%);
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0), rgba(120, 89, 207, 0.25) 100%);
 }
 
 .slider-button-prev:disabled .slider-button-prev-icon,

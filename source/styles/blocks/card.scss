@@ -20,7 +20,7 @@
 
 .card:hover {
   @media (min-width: $desktop) {
-    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -94,6 +94,6 @@
     width: 20px;
     top: 2px;
     height: 16px;
-    background-image: url(../../images/icons/basket-plus.svg);
+    background-image: url("../../images/icons/basket-plus.svg");
   }
 }

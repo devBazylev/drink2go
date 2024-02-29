@@ -87,7 +87,7 @@
     padding: 0;
   }
 
-  &::before{
+  &::before {
     @include pseudo;
     width: 52px;
     height: 56px;
@@ -106,7 +106,7 @@
 }
 
 .features__item--clock {
-  &::before{
+  &::before {
     background-image: url("../../images/stack.svg#clock");
 
     @media (min-width: $tablet) {
@@ -120,7 +120,7 @@
 }
 
 .features__item--pocket {
-  &::before{
+  &::before {
     background-image: url("../../images/stack.svg#pocket");
 
     @media (min-width: $tablet) {
@@ -134,7 +134,7 @@
 }
 
 .features__item--energy {
-  &::before{
+  &::before {
     background-image: url("../../images/stack.svg#energy");
 
     @media (min-width: $tablet) {
@@ -148,7 +148,7 @@
 }
 
 .features__item--leaf {
-  &::before{
+  &::before {
     background-image: url("../../images/stack.svg#leaf");
 
     @media (min-width: $tablet) {

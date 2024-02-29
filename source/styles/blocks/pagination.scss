@@ -46,7 +46,7 @@
   border-radius: 4px;
 
   @media (min-width: $tablet) {
-    padding: 1px 0px 0px 0;
+    padding: 1px 0 0;
   }
 }
 
@@ -86,7 +86,7 @@
 
 .pagination__link--left {
   font-size: 25px;
-  padding: 0 2px 2px 0px;
+  padding: 0 2px 2px 0;
 
   @media (min-width: $tablet) {
     width: 91px;
@@ -96,7 +96,7 @@
 
 .pagination__link--right {
   font-size: 25px;
-  padding: 0 0px 2px 1px;
+  padding: 0 0 2px 1px;
 
   @media (min-width: $tablet) {
     width: 104px;

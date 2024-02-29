@@ -49,7 +49,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0px 0px 21px
+    margin: 0 0 21px;
   }
 }
 
@@ -84,7 +84,7 @@
   background-color: var(--bg-dark-alter);
 }
 
-.range__toggle:active .range__toggle-stuff{
+.range__toggle:active .range__toggle-stuff {
   position: relative;
   left: -4px;
   display: block;
