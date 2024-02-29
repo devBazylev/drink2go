@@ -49,6 +49,10 @@
   @media (min-width: $tablet) {
     margin: 0 auto 26px 79px;
   }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 26px;
+  }
 }
 
 .card__text {

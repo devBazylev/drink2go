@@ -86,7 +86,7 @@
 
 .pagination__link--left {
   font-size: 25px;
-  padding: 0 0px 2px 2px;
+  padding: 0 2px 2px 0px;
 
   @media (min-width: $tablet) {
     width: 91px;
@@ -96,7 +96,7 @@
 
 .pagination__link--right {
   font-size: 25px;
-  padding: 0 3px 2px 0;
+  padding: 0 0px 2px 1px;
 
   @media (min-width: $tablet) {
     width: 104px;

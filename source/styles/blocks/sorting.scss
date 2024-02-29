@@ -14,6 +14,7 @@
   }
 
   @media (min-width: $desktop) {
+    width: 283px;
     margin: 0 0 0 auto;
   }
 }
@@ -47,6 +48,10 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  @media (min-width: $desktop) {
+    width: 169px;
+  }
 }
 
 .sorting__panel:hover,
