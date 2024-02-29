@@ -23,6 +23,11 @@
   }
 }
 
+.slider-image-2,
+.slider-image-3 {
+  display: none;
+}
+
 .slider-button-prev,
 .slider-button-next {
   display: block;
@@ -30,14 +35,6 @@
   border: none;
   cursor: pointer;
   background-color: var(--bg-bright);
-
-  &::before {
-    @include pseudo;
-    width: 11px;
-    height: 20px;
-    margin: auto;
-    background-color: var(--bg-dark);
-  }
 
   @media (min-width: $tablet) {
     height: 640px;
@@ -50,18 +47,27 @@
 
 .slider-button-prev {
   grid-area: 1/1/6/2;
-
-  &::before {
-    mask-image: url("../../images/stack.svg#left-arrow");
-  }
 }
 
 .slider-button-next {
   grid-area: 1/4/6/5;
+}
 
-  &::before {
-    mask-image: url("../../images/stack.svg#right-arrow");
-  }
+.slider-button-prev-icon,
+.slider-button-next-icon {
+  display: block;
+  width: 11px;
+  height: 20px;
+  margin: auto;
+  background-color: var(--bg-dark);
+}
+
+.slider-button-prev-icon {
+  mask-image: url("../../images/stack.svg#left-arrow");
+}
+
+.slider-button-next-icon {
+  mask-image: url("../../images/stack.svg#right-arrow");
 }
 
 .slider-button-prev:active {
@@ -70,6 +76,16 @@
 
 .slider-button-next:active {
   background: linear-gradient(90deg, rgba(120, 89, 207, 0.00) 0%, rgba(120, 89, 207, 0.25) 100%);
+}
+
+.slider-button-prev:disabled .slider-button-prev-icon,
+.slider-button-next:disabled .slider-button-next-icon {
+  background-color: var(--bg-darker);
+}
+
+.slider-button-prev:disabled,
+.slider-button-next:disabled {
+  background: none;
 }
 
 .slider-pagination {
@@ -81,7 +97,39 @@
     width: 202px;
     height: 24px;
     margin: 0 auto;
-    background-color: aqua;
   }
 }
 
+.slider-pagination-list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-input-wrapper {
+  display: block;
+  width: 62px;
+  height: 24px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.slider-backup {
+  display: block;
+  width: 62px;
+  height: 4px;
+  background-color: var(--bg-lightest);
+}
+
+.slider-input:checked + .slider-backup {
+  background-color: var(--bg-dark);
+}
+
+.slider-input-wrapper:hover .slider-backup,
+.slider-input:focus + .slider-backup {
+  background-color: var(--bg-dark-alter);
+}
+
+.slider-input-wrapper:active .slider-backup {
+  background-color: var(--bg-dark);
+}

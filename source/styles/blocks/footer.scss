@@ -41,6 +41,27 @@
   }
 }
 
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+
+  @media (min-width: $desktop) {
+    margin: 0 0 10px;
+  }
+}
+
+.footer__logo-text {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    margin: 0 0 50px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}
+
 .footer__title {
   margin: 0 0 12px;
   font-size: 14px;

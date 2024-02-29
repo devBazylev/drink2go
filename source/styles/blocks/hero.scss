@@ -13,8 +13,8 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: 1fr 655px 625px 1fr;
+    background: none;
     background-color: var(--bg-bright);
-    background: linear-gradient(to bottom, var(--bg-bright) 640px, var(--bg-bright) 100%);
   }
 }
 

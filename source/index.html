@@ -11,11 +11,11 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" type="module" defer></script>
   </head>
   <body class="page__body">
     <header class="header" data-test="header">
-      <a href="#" class="logo">
+      <a href="#" class="logo" tabindex="1">
         <picture>
           <source media="(min-width: 1440px)" srcset="images/logo-large.svg" width="170" height="36">
           <source media="(min-width: 768px)" srcset="images/logo-medium.svg" width="82" height="36">
@@ -40,16 +40,16 @@
       <nav class="header__navigation header__navigation--closed">
         <ul class="header__list">
           <li class="header__item header__item--current">
-            <a href="#" class="header__link">Главная</a>
+            <a href="#" class="header__link" tabindex="1">Главная</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Каталог</a>
+            <a href="#" class="header__link" tabindex="1">Каталог</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Доставка</a>
+            <a href="#" class="header__link" tabindex="1">Доставка</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">О нас</a>
+            <a href="#" class="header__link" tabindex="1">О нас</a>
           </li>
         </ul>
       </nav>
@@ -66,12 +66,56 @@
             <source type="image/webp" srcset="images/flat-white-mobile@1x.webp 1x, images/flat-white-mobile@2x.webp 2x" width="280" height="280">
             <source media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png 1x, images/flat-white-desktop@2x.png 2x" width="600" height="600">
             <source media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png 1x, images/flat-white-tablet@2x.png 2x" width="476" height="476">
-            <img class="slider__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png" width="280" height="280" alt="Кофе флэт уайт.">
+            <img class="slider-image-1" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Кофе флэт уайт.">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.webp 1x, images/lavender-desktop@2x.webp 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.webp 1x, images/lavender-tablet@2x.webp 2x" width="476" height="476">
+            <source type="image/webp" srcset="images/lavender-mobile@1x.webp 1x, images/lavender-mobile@2x.webp 2x" width="280" height="280">
+            <source media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.png 1x, images/lavender-desktop@2x.png 2x" width="600" height="600">
+            <source media="(min-width: 768px)" srcset="images/lavender-tablet@1x.png 1x, images/lavender-tablet@2x.png 2x" width="476" height="476">
+            <img class="slider-image-2" src="images/lavender-mobile@1x.png" srcset="images/lavender-mobile@2x.png 2x" width="280" height="280" alt="Кофе флэт уайт.">
+          </picture>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.webp 1x, images/espresso-desktop@2x.webp 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.webp 1x, images/espresso-tablet@2x.webp 2x" width="476" height="476">
+            <source type="image/webp" srcset="images/espresso-mobile@1x.webp 1x, images/espresso-mobile@2x.webp 2x" width="280" height="280">
+            <source media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.png 1x, images/espresso-desktop@2x.png 2x" width="600" height="600">
+            <source media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png 1x, images/espresso-tablet@2x.png 2x" width="476" height="476">
+            <img class="slider-image-3" src="images/espresso-mobile@1x.png" srcset="images/espresso-mobile@2x.png 2x" width="280" height="280" alt="Эспрессо.">
           </picture>
         </div>
-        <button class="slider-button-prev" type="button"></button>
-        <button class="slider-button-next" type="button"></button>
-        <div class="slider-pagination"></div>
+        <button class="slider-button-prev" type="button" disabled>
+          <span class="slider-button-prev-icon"></span>
+        </button>
+        <button class="slider-button-next" type="button">
+          <span class="slider-button-next-icon"></span>
+        </button>
+        <div class="slider-pagination">
+          <ul class="slider-pagination-list">
+            <li>
+              <label class="slider-input-wrapper">
+                <input class="slider-input visually-hidden" type="radio" name="slider" value="first-slide" checked>
+                <span class="slider-backup"></span>
+                <span class="visually-hidden">Первый слайд</span>
+              </label>
+            </li>
+            <li>
+              <label class="slider-input-wrapper">
+                <input class="slider-input visually-hidden" type="radio" name="slider" value="first-slide">
+                <span class="slider-backup"></span>
+                <span class="visually-hidden">Второй слайд</span>
+              </label>
+            </li>
+            <li>
+              <label class="slider-input-wrapper">
+                <input class="slider-input visually-hidden" type="radio" name="slider" value="first-slide">
+                <span class="slider-backup"></span>
+                <span class="visually-hidden">Третий слайд</span>
+              </label>
+            </li>
+          </ul>
+        </div>
         <h2 class="hero__title">Декаф флэт уайт</h2>
         <p class="hero__gist">Новинка!</p>
         <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -80,7 +124,7 @@
         <a href="#" class="hero__button button">Заказать</a>
       </section>
       <section class="features" data-test="features">
-        <h2 class="features__title">Главные причины выбрать <span class="features__title--capitalize">drink2go</span></h2>
+        <h2 class="features__title">Главные причины выбрать <span class="features__title-capitalize">drink2go</span></h2>
         <p class="features__gist">Преимущества</p>
         <ul class="features__list">
           <li class="features__item features__item--clock">
@@ -117,10 +161,10 @@
                 <button class="range__toggle range__toggle--max" type="button">
                   <span class="range__toggle-stuff" aria-label="Изменить максимальную цену"></span>
                 </button>
+                <input class="range__price range__price--from" type="number" name="price-from" placeholder="0" min="0" max="1000000" required>
+                <div class="range__dash"></div>
+                <input class="range__price range__price--to" type="number" name="price-to" value="900" min="1" max="1000000" required>
               </div>
-              <input class="range__price range__price--from" type="number" name="price-from" placeholder="0" min="0" max="1000000" required>
-              <div class="range__dash"></div>
-              <input class="range__price range__price--to" type="number" name="price-to" value="900" min="1" max="1000000" required>
             </fieldset>
             <fieldset class="catalog__radio">
               <legend class="catalog__subtitle">Наличие молока</legend>
@@ -322,15 +366,15 @@
     </main>
     <footer class="footer" data-test="footer">
       <div class="footer__wrapper">
-        <a href="#" class="logo__footer">
+        <a href="#" class="footer__logo">
           <picture>
             <source media="(min-width: 768px)" srcset="images/logo-large.svg" width="170" height="36">
-            <img class="logo__icon" src="images/logo-medium.svg" alt="Логотип drink2go." width="82" height="36">
+            <img src="images/logo-medium.svg" alt="Логотип drink2go." width="82" height="36">
           </picture>
         </a>
-        <span class="logo__text">Интернет-магазин кофейных напитков</span>
+        <h2 class="footer__logo-text">Интернет-магазин кофейных напитков</h2>
         <section class="social">
-          <h2 class="visually-hidden">Соцсети</h2>
+          <h3 class="visually-hidden">Соцсети</h3>
           <ul class="social__list">
             <li>
               <a class="social__link" href="https://vk.com/htmlacademy">
@@ -351,7 +395,7 @@
         </section>
       </div>
       <section class="footer__online">
-        <h2 class="footer__title">Интернет-магазин</h2>
+        <h3 class="footer__title">Интернет-магазин</h3>
         <ul class="footer__online-list">
           <li>
             <a href="#" class="footer__online-link">Каталог</a>
@@ -368,7 +412,7 @@
         </ul>
       </section>
       <section class="footer__media">
-        <h2 class="footer__title">Медиа</h2>
+        <h3 class="footer__title">Медиа</h3>
         <ul class="footer__media-list">
           <li>
             <a href="#" class="footer__media-link">Блог</a>
@@ -382,7 +426,7 @@
         </ul>
       </section>
       <section class="footer__contacts">
-        <h2 class="footer__title">Контакты</h2>
+        <h3 class="footer__title">Контакты</h3>
         <ul class="footer__contacts-list">
           <li>
             <a href="#" class="footer__contacts-link">
@@ -400,7 +444,7 @@
         <span class="footer__academy-text">Разработано в HTML Academy</span>
       </a>
     </footer>
-    <!-- <script src="vendor/nouislider/nouislider.js"></script>
-    <script src="js/main.js" type="module"></script> -->
+    <script src="vendor/nouislider/nouislider.js"></script>
+    <!-- <script src="scripts/index.js" type="module"></script> -->
   </body>
 </html>
