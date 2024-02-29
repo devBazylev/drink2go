@@ -9,17 +9,19 @@
   margin: 0 auto 10px;
 
   @media (min-width: $tablet) {
-    grid-area: 5/2/7/4;
+    grid-area: 5/2/6/4;
     width: 476px;
     height: 476px;
+    padding: 0;
     margin: 0 auto;
   }
 
   @media (min-width: $desktop) {
-    grid-area: 1/2/5/3;
+    // display: none;
+    grid-area: 1/2/6/3;
     width: 600px;
     height: 600px;
-    margin: 30px 30px 84px 25px;
+    margin: 30px 30px 0 25px;
   }
 }
 
@@ -41,7 +43,8 @@
   }
 
   @media (min-width: $desktop) {
-    height: 100%;
+    // display: none;
+    min-height: 714px;
   }
 }
 
@@ -58,16 +61,25 @@
   display: block;
   width: 11px;
   height: 20px;
-  margin: auto;
   background-color: var(--bg-dark);
 }
 
 .slider-button-prev-icon {
+  margin: -1px 25% auto auto;
   mask-image: url("../../images/stack.svg#left-arrow");
+
+  @media (min-width:$tablet) {
+    margin: -1px 44% auto auto;
+  }
 }
 
 .slider-button-next-icon {
+  margin: -1px auto auto 25%;
   mask-image: url("../../images/stack.svg#right-arrow");
+
+  @media (min-width:$tablet) {
+    margin: -1px auto auto 44%;
+  }
 }
 
 .slider-button-prev:active {
@@ -92,11 +104,11 @@
   display: none;
 
   @media (min-width: $desktop) {
-    grid-area: 5/2/6/4;
+    grid-area: 4/2/6/4;
     display: block;
     width: 202px;
     height: 24px;
-    margin: 0 auto;
+    margin: 198px auto 0;
   }
 }
 

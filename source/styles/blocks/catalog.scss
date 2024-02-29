@@ -3,11 +3,11 @@
 
 .catalog {
   display: grid;
-  padding: 50px 20px 44px;
+  padding: 50px 20px 43px;
   background-color: var(--bg-lighter);
 
   @media (min-width: $tablet) {
-    padding: 80px 0 90px;
+    padding: 80px 0 88px;
   }
 
   @media (min-width: $desktop) {
@@ -27,7 +27,7 @@
 
   @media (min-width: $tablet) {
     width: 728px;
-    margin: 0 auto 20px;
+    margin: 0 auto 21px;
     font-size: 42px;
     line-height: 64px;
   }
@@ -55,7 +55,7 @@
 
   @media (min-width: $tablet) {
     grid-template-columns: 223px 222px 223px;
-    gap: 40px 30px;
+    gap: 9px 30px;
   }
 
   @media (min-width: $desktop) {
@@ -67,13 +67,18 @@
 
 .catalog__gist {
   order: -1;
-  margin: 0 0 4px;
+  margin: 0 0 5px;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
   color: var(--bright);
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 0.48px;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 4px;
+  }
 
   @media (min-width: $desktop) {
     grid-area: 1/2/2/4;
@@ -83,7 +88,7 @@
 .catalog__range {
   display: grid;
   width: 280px;
-  margin: 0 auto 30px;
+  margin: 0 auto 31px;
   padding: 0;
   border: none;
 
@@ -169,11 +174,11 @@
 .catalog__card-list {
   @include reset-list;
   display: grid;
-  gap: 20px;
+  gap: 21px;
 
   @media (min-width: $tablet) {
     grid-template-columns: 349px 349px;
-    gap: 30px;
+    gap: 31px 30px;
   }
 
   @media (min-width: $desktop) {
@@ -184,10 +189,11 @@
 
 .catalog__button {
   width: 280px;
-  padding: 0;
-  margin: 0 auto 20px;
+  padding: 9px 0 7px;
+  margin: -1px auto 20px;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 1.5px;
 
   @media (min-width: $tablet) {
     grid-area: 2/1/3/4;
@@ -241,7 +247,7 @@
 
 .catalog__wrapper-cards {
   width: 280px;
-  margin: 0 auto 40px;
+  margin: 0 auto 41px;
 
   @media (min-width: $tablet) {
     width: 728px;

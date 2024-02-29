@@ -45,7 +45,7 @@
   @media (min-width: $tablet) {
     grid-area: 1/2/2/3;
     min-width: 399px;
-    margin: 0 auto 0 67px;
+    margin: 0px auto 0px 48px;
   }
 
   @media (min-width: $desktop) {
@@ -121,6 +121,7 @@
   color: var(--main);
   text-transform: uppercase;
   border-top: 1px solid var(--border-light);
+  letter-spacing: 0.24px;
 
   @media (min-width: $tablet) {
     display: block;
@@ -173,12 +174,12 @@
 .header__navigation--closed + .header__toggle::before {
   @include pseudo;
   position: absolute;
-  top: 22px;
+  top: 24px;
   left: 22px;
   width: 16px;
   height: 2px;
   background-color: var(--bg-darkest);
-  box-shadow: 0 6px 0 0 var(--bg-darkest), 0 12px 0 0 var(--bg-darkest);
+  box-shadow: 0 5px 0 0 var(--bg-darkest), 0 10px 0 0 var(--bg-darkest);
 }
 
 .header__navigation--opened + .header__toggle::before,
@@ -186,8 +187,8 @@
   @include pseudo;
   position: absolute;
   top: 29px;
-  left: 21px;
-  width: 18px;
+  left: 22px;
+  width: 16px;
   height: 2px;
   background-color: var(--bg-darkest);
 }

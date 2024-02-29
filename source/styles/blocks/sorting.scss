@@ -5,12 +5,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 16px;
+  margin: 1px 0 16px 3px;
   cursor: pointer;
 
   @media (min-width: $tablet) {
-    width: 282px;
-    margin: 0 40px 0 auto;
+    width: 279px;
+    margin: 1px 23px 0 auto;
   }
 
   @media (min-width: $desktop) {
@@ -30,7 +30,7 @@
   appearance: none;
   width: 165px;
   height: 32px;
-  padding: 4px 9px;
+  padding: 4px 13px;
   letter-spacing: inherit;
   word-spacing: inherit;
   font-family: inherit;
@@ -41,7 +41,7 @@
   color: var(--bright);
   background-color: var(--bg-lighter);
   background-repeat: no-repeat;
-  background-position: calc(100% - 0.25em) 13px;
+  background-position: calc(100% - 0.45em) 13px;
   background-size: 10px 6px;
   background-image: url(../../images/icons/arrow-down.svg);
   border: none;
@@ -60,7 +60,7 @@ select:active:not([multiple]) {
   appearance: none;
   border: none;
   background-repeat: no-repeat;
-  background-position: calc(100% - 0.25em) 13px;
+  background-position: calc(100% - 0.45em) 13px;
   background-size: 10px 6px;
   background-image: url(../../images/icons/arrow-up.svg);
 }

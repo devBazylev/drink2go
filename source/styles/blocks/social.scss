@@ -26,6 +26,7 @@
   width: 40px;
   height: 40px;
   border-radius: 4px;
+  padding: 0 0 5px;
 }
 
 .social__link-stuff {
@@ -40,6 +41,8 @@
 }
 
 .social__link-stuff--pinteres {
+  width: 22px;
+  height: 22px;
   mask-image: url("../../images/stack.svg#pinterest");
 }
 

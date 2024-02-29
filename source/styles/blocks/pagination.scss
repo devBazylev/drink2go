@@ -44,6 +44,10 @@
   color: var(--bright);
   background-color: var(--bg-lightest);
   border-radius: 4px;
+
+  @media (min-width: $tablet) {
+    padding: 1px 0px 0px 0;
+  }
 }
 
 .pagination__link:hover,
@@ -80,13 +84,23 @@
   background-color: transparent;
 }
 
-.pagination__link--right,
 .pagination__link--left {
   font-size: 25px;
-  padding: 0 0 2px;
+  padding: 0 0px 2px 2px;
 
   @media (min-width: $tablet) {
     width: 91px;
+    padding: 1px 1px 1px 0;
+  }
+}
+
+.pagination__link--right {
+  font-size: 25px;
+  padding: 0 3px 2px 0;
+
+  @media (min-width: $tablet) {
+    width: 104px;
+    padding: 1px 1px 1px 0;
   }
 }
 
@@ -95,9 +109,13 @@
   display: none;
   font-size: 16px;
   line-height: 24px;
+  font-weight: 400;
 
   @media (min-width: $tablet) {
+    min-width: 91px;
     display: block;
+    padding: 8px 20px;
+    text-align: center;
   }
 }
 

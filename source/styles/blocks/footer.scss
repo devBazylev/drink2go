@@ -23,14 +23,14 @@
 }
 
 .footer__wrapper {
-  padding: 20px;
+  padding: 18px 20px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-light);
 
   @media (min-width: $tablet) {
     grid-area: 1/1/2/4;
-    padding: 42px 0 20px;
+    padding: 38px 0 28px;
     border: none;
   }
 
@@ -63,16 +63,20 @@
 }
 
 .footer__title {
-  margin: 0 0 12px;
+  margin: 0 0 17px;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
   color: var(--bright);
-  text-transform: uppercase;
+  letter-spacing: 0.28px;
+}
+
+.footer__title--contacts {
+  margin: 0 0 20px;
 }
 
 .footer__online {
-  padding: 20px;
+  padding: 20px 20px 28px;
   border-bottom: 1px solid var(--border-light);
 
   @media (min-width: $tablet) {
@@ -91,7 +95,7 @@
   @include reset-list;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 17px;
 }
 
 .footer__online-link,
@@ -101,6 +105,7 @@
   line-height: 16px;
   color: var(--main);
   text-transform: uppercase;
+  letter-spacing: 0.24px;
 }
 
 .footer__online-link:hover,
@@ -119,7 +124,7 @@
 }
 
 .footer__media {
-  padding: 20px;
+  padding: 20px 20px 28px;
   border-bottom: 1px solid var(--border-light);
 
   @media (min-width: $tablet) {
@@ -134,7 +139,7 @@
 }
 
 .footer__contacts {
-  padding: 20px;
+  padding: 20px 20px 19px;
   border-bottom: 1px solid var(--border-light);
 
   @media (min-width: $tablet) {
@@ -152,7 +157,7 @@
   @include reset-list;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 17px;
 }
 
 .footer__contacts-link {
@@ -177,17 +182,23 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    @media (min-width: $tablet) {
+      top: 0px;
+      width: 24px;
+      height: 20px;
+    }
   }
 }
 
 .footer__contacts-tel {
   display: flex;
   justify-content: left;
-  gap: 6px;
 
   &::before {
     position: relative;
-    top: 2px;
+    top: 1px;
+    right: 3px;
     @include pseudo;
     width: 19px;
     height: 16px;
@@ -200,17 +211,20 @@
 
 .footer__academy-link {
   display: inline-flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   width: 320px;
   height: 66px;
-  margin: 0 auto;
+  margin: 0 auto 0 18%;
+  padding: 20px 0 30px;
   color: var(--common);
   font-size: 12px;
   line-height: 16px;
+  letter-spacing: 0.01px;
 
   @media (min-width: $tablet) {
     grid-area: 3/1/4/4;
+    margin: 13px auto 1px 261px;
     padding: 0;
     border: none;
   }

@@ -5,13 +5,9 @@
   grid-area: 1/1/2/2;
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px 10px;
-
-  @media (min-width: $tablet) {
-    padding: 20px;
-  }
+  padding: 12px 20px 8px;
 
   @media (min-width: $desktop) {
-    padding: 20px 20px 20px 40px;
+    padding: 22px 20px 18px 40px;
   }
 }

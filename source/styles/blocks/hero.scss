@@ -25,19 +25,22 @@
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
+  letter-spacing: 0.72px;
   text-transform: capitalize;
   text-align: center;
 
   @media (min-width: $tablet) {
     grid-area: 2/2/3/4;
     width: 608px;
+    margin: 0 auto 16px;
     font-size: 56px;
     line-height: 80px;
-    margin: 0 auto 16px;
+    letter-spacing: 1.12px;
   }
 
   @media (min-width: $desktop) {
     grid-area: 2/3/3/4;
+    margin: 0 auto 16px;
     width: 625px;
     text-align: left;
   }
@@ -50,6 +53,7 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 700;
+  letter-spacing: 0.48px;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
@@ -67,7 +71,7 @@
 .hero__text {
   grid-area: 4/2/5/4;
   width: 280px;
-  margin: 0 auto 24px;
+  margin: 0 auto 20px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -75,6 +79,7 @@
   @media (min-width: $tablet) {
     grid-area: 3/2/4/4;
     width: 608px;
+    margin: 0 auto 20px;
     font-size: 20px;
     line-height: 32px;
   }
@@ -82,6 +87,7 @@
   @media (min-width: $desktop) {
     grid-area: 3/3/4/4;
     width: 625px;
+    margin: 0 auto 40px;
     text-align: left;
   }
 }
@@ -90,25 +96,26 @@
   grid-area: 5/2/6/3;
   display: inline-flex;
   align-items: center;
-  margin: 0 20px 60px auto;
+  margin: 0 19px 60px auto;
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
 
   @media (min-width: $tablet) {
     grid-area: 4/2/5/3;
-    margin: 0 20px 20px auto;
+    margin: 0 19px 20px auto;
   }
 
   @media (min-width: $desktop) {
     grid-area: 4/3/5/4;
-    margin: 0 20px 158px 46px;
+    height: 40px;
+    margin: 0 20px 0 46px;
   }
 }
 
 .hero__price--old {
   grid-area: 5/2/6/3;
-  margin: 2px 77px 60px auto;
+  margin: 3px 76px 60px auto;
   font-size: 16px;
   line-height: 32px;
   font-weight: 400;
@@ -128,16 +135,18 @@
 
 .hero__button {
   grid-area: 5/3/6/4;
-  margin: 0 auto 60px 0;
+  margin: 0 auto 60px 2px;
   width: 113px;
+  letter-spacing: 1px;
 
   @media (min-width: $tablet) {
     grid-area: 4/3/5/4;
-    margin: 0 auto 20px 0;
+    margin: 0 auto 20px 2px;
   }
 
   @media (min-width: $desktop) {
-    grid-area: 4/3/5/4;
-    margin: 0 auto 158px 117px;
+    grid-area: 4 / 3 / 5 / 4;
+    margin: 0 auto 242px 117px;
+    height: 40px;
   }
 }

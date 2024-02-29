@@ -4,7 +4,7 @@
 .card {
   display: grid;
   width: 280px;
-  padding: 40px 20px 20px;
+  padding: 39px 20px 20px;
   border-radius: 4px;
   background-color: var(--bg-lightest);
 
@@ -29,6 +29,13 @@
   margin: 0 0 4px;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 0 0 9px;
+  }
 }
 
 .card__title-link {
@@ -37,7 +44,11 @@
 
 .card__image-link {
   grid-area: 1/1/2/3;
-  margin: 0 auto 21px;
+  margin: 0 auto 20px;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto 26px 79px;
+  }
 }
 
 .card__text {
@@ -45,6 +56,10 @@
   margin: 0 0 16px;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 20px;
+  }
 }
 
 .card__price {
@@ -52,31 +67,29 @@
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
-  margin: 2px 0 0;
+  margin: 2px 0 0 -2px;
 }
 
 .card__button {
   grid-area: 4/2/5/3;
+  min-height: 36px;
   margin: 0 0 0 auto;
   font-size: 14px;
   line-height: 20px;
 }
 
 .card__button-text {
+
   display: flex;
   justify-content: space-between;
   gap: 6px;
 
   &::before {
     @include pseudo;
+    position: relative;
     width: 20px;
+    top: 2px;
     height: 16px;
     background-image: url(../../images/icons/basket-plus.svg);
   }
 }
-
-
-// .catalog__item:hover,
-// .catalog__item:focus-within {
-//   box-shadow: 0 5px 15px 0 rgb($base-black, 0.15);
-// }

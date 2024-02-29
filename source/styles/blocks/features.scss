@@ -6,7 +6,7 @@
   padding: 50px 20px 60px;
 
   @media (min-width: $tablet) {
-    padding: 60px 20px 100px;
+    padding: 60px 20px 98px;
   }
 
   @media (min-width: $desktop) {
@@ -16,7 +16,7 @@
 
 .features__title {
   width: 280px;
-  margin: 0 auto;
+  margin: 0 auto 3px;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
@@ -34,19 +34,20 @@
   }
 }
 
-.features__title-capitalize {
-  text-transform: capitalize;
-}
-
 .features__gist {
   order: -1;
-  margin: 0 0 4px;
+  margin: 0 0 5px;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
+  letter-spacing: 0.48px;
   color: var(--bright);
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 4px;
+  }
 }
 
 .features__list {
@@ -74,10 +75,10 @@
 
   @media (min-width: $tablet) {
     display: grid;
-    gap: 10px 20px;
+    gap: 11px 19px;
     width: 339px;
     min-height: 94px;
-    padding: 0 11px;
+    padding: 0 0 0 11px;
   }
 
   @media (min-width: $desktop) {
@@ -106,24 +107,40 @@
 .features__item--clock {
   &::before{
     background-image: url("../../images/stack.svg#clock");
+
+    @media (min-width: $tablet) {
+      margin: 4px 0 0 -1px;
+    }
   }
 }
 
 .features__item--pocket {
   &::before{
     background-image: url("../../images/stack.svg#pocket");
+
+    @media (min-width: $tablet) {
+      margin: 0 0 0 -1px;
+    }
   }
 }
 
 .features__item--energy {
   &::before{
     background-image: url("../../images/stack.svg#energy");
+
+    @media (min-width: $tablet) {
+      margin: -1px 0 0 -1px;
+    }
   }
 }
 
 .features__item--leaf {
   &::before{
     background-image: url("../../images/stack.svg#leaf");
+
+    @media (min-width: $tablet) {
+      margin: 3px 0 0 -1px;
+    }
   }
 }
 
