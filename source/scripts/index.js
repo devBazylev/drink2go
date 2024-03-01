@@ -1,7 +1,5 @@
-const nav = document.querySelector('.header__navigation');
-const burger = document.querySelector('.header__toggle');
+import { burgerHandler } from './burger.js';
+import { changePrice } from './slider.js';
 
-burger.onclick = function() {
-  nav.classList.toggle('header__navigation--closed');
-  nav.classList.toggle('header__navigation--opened');
-};
+burgerHandler();
+changePrice();

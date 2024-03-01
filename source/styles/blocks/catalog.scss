@@ -87,7 +87,6 @@
 }
 
 .catalog__range {
-  display: grid;
   width: 280px;
   margin: 0 auto 31px;
   padding: 0;
@@ -118,6 +117,7 @@
 
 .catalog__subtitle--range {
   grid-area: 1/1/2/4;
+  margin: 0 0 29px;
 }
 
 .catalog__milk-list {
@@ -261,4 +261,70 @@
     width: 1011px;
     margin: 0 auto 60px;
   }
+}
+
+.catalog__price-wrapper {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 317px;
+  }
+}
+
+.catalog__price {
+  width: 118px;
+  height: 40px;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid var(--bg-brighter);
+
+  @media (min-width: $tablet) {
+    width: 87px;
+    height: 39px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 134px;
+  }
+}
+
+.catalog__price:focus {
+  outline: 2px solid var(--border-very-bright);
+  outline-offset: -2px;
+}
+
+.catalog__price:disabled {
+  border: 2px solid var(--border-cloudy);
+}
+
+.catalog__price--from {
+  grid-area: 3/1/4/2;
+}
+
+.catalog__dash {
+  grid-area: 3/2/4/3;
+  width: 8px;
+  height: 2px;
+  margin: auto;
+  background-color: var(--bg-darker);
+
+  @media (min-width: $tablet) {
+    margin: 20px auto;
+  }
+}
+
+.catalog__price--to {
+  grid-area: 3/3/4/4;
+  margin: 0 0 0 auto;
 }

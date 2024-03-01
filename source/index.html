@@ -11,7 +11,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" type="module" defer></script>
+    <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="header" data-test="header">
@@ -64,28 +64,28 @@
             <source type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp 1x, images/flat-white-desktop@2x.webp 2x" width="600" height="600">
             <source type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp 1x, images/flat-white-tablet@2x.webp 2x" width="476" height="476">
             <source type="image/webp" srcset="images/flat-white-mobile@1x.webp 1x, images/flat-white-mobile@2x.webp 2x" width="280" height="280">
-            <source type="image/png" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png 1x, images/flat-white-desktop@2x.png 2x" width="600" height="600">
-            <source type="image/png" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png 1x, images/flat-white-tablet@2x.png 2x" width="476" height="476">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png 1x, images/flat-white-desktop@2x.png 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png 1x, images/flat-white-tablet@2x.png 2x" width="476" height="476">
             <img class="slider-image-1" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Кофе флэт уайт.">
           </picture>
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.webp 1x, images/lavender-desktop@2x.webp 2x" width="600" height="600">
             <source type="image/webp" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.webp 1x, images/lavender-tablet@2x.webp 2x" width="476" height="476">
             <source type="image/webp" srcset="images/lavender-mobile@1x.webp 1x, images/lavender-mobile@2x.webp 2x" width="280" height="280">
-            <source type="image/png" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.png 1x, images/lavender-desktop@2x.png 2x" width="600" height="600">
-            <source type="image/png" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.png 1x, images/lavender-tablet@2x.png 2x" width="476" height="476">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.png 1x, images/lavender-desktop@2x.png 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.png 1x, images/lavender-tablet@2x.png 2x" width="476" height="476">
             <img class="slider-image-2" src="images/lavender-mobile@1x.png" srcset="images/lavender-mobile@2x.png 2x" width="280" height="280" alt="Лавандовый латте.">
           </picture>
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.webp 1x, images/espresso-desktop@2x.webp 2x" width="600" height="600">
             <source type="image/webp" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.webp 1x, images/espresso-tablet@2x.webp 2x" width="476" height="476">
             <source type="image/webp" srcset="images/espresso-mobile@1x.webp 1x, images/espresso-mobile@2x.webp 2x" width="280" height="280">
-            <source type="image/png" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.png 1x, images/espresso-desktop@2x.png 2x" width="600" height="600">
-            <source type="image/png" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png 1x, images/espresso-tablet@2x.png 2x" width="476" height="476">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.png 1x, images/espresso-desktop@2x.png 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png 1x, images/espresso-tablet@2x.png 2x" width="476" height="476">
             <img class="slider-image-3" src="images/espresso-mobile@1x.png" srcset="images/espresso-mobile@2x.png 2x" width="280" height="280" alt="Эспрессо.">
           </picture>
         </div>
-        <button class="slider-button-prev" type="button">
+        <button class="slider-button-prev" type="button" disabled>
           <span class="slider-button-prev-icon"></span>
           <span class="visually-hidden">Перейти к предыдущему слайду</span>
         </button>
@@ -154,22 +154,17 @@
           <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog__range">
               <legend class="catalog__subtitle catalog__subtitle--range">Цена</legend>
-              <div class="range">
-                <div class="range__bar"></div>
-                <div class="range__scale"></div>
-                <button class="range__toggle range__toggle--min" type="button">
-                  <span class="range__toggle-stuff"></span>
-                  <span class="visually-hidden">Изменить минимальную цену</span>
-                </button>
-                <button class="range__toggle range__toggle--max" type="button">
-                  <span class="range__toggle-stuff"></span>
-                  <span class="visually-hidden">Изменить максимальную цену</span>
-                </button>
-                <label class="visually-hidden" for="price-from"></label>
-                <input class="range__price range__price--from" type="number" name="price-from" placeholder="0" min="0" max="1000000" id="price-from" required>
-                <div class="range__dash"></div>
-                <label class="visually-hidden" for="price-to"></label>
-                <input class="range__price range__price--to" type="number" name="price-to" value="900" min="1" max="1000000" id="price-to" required>
+              <div class="range" id="slider"></div>
+              <div class="catalog__price-wrapper">
+                <label>
+                  <input class="catalog__price catalog__price--from" type="number" name="min-price" placeholder="0" min="0" max="1000" id="input-0" required>
+                  <span class="visually-hidden">Введите минимальную цену</span>
+                </label>
+                <div class="catalog__dash"></div>
+                <label>
+                  <input class="catalog__price catalog__price--to" type="number" name="max-price" value="900" min="1" max="1000" id="input-1" required>
+                  <span class="visually-hidden">Введите максимальную цену</span>
+                </label>
               </div>
             </fieldset>
             <fieldset class="catalog__radio">
