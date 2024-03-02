@@ -106,7 +106,7 @@
 
 .features__item--clock {
   &::before {
-    background-image: url("../../images/stack.svg#clock");
+    background-image: url("../../images/icons/stack.svg#features-1");
 
     @media (min-width: $tablet) {
       margin: 4px 0 0 -1px;
@@ -120,7 +120,7 @@
 
 .features__item--pocket {
   &::before {
-    background-image: url("../../images/stack.svg#pocket");
+    background-image: url("../../images/icons/stack.svg#features-2");
 
     @media (min-width: $tablet) {
       margin: 0 0 0 -1px;
@@ -134,7 +134,7 @@
 
 .features__item--energy {
   &::before {
-    background-image: url("../../images/stack.svg#energy");
+    background-image: url("../../images/icons/stack.svg#features-3");
 
     @media (min-width: $tablet) {
       margin: -1px 0 0 -1px;
@@ -148,7 +148,7 @@
 
 .features__item--leaf {
   &::before {
-    background-image: url("../../images/stack.svg#leaf");
+    background-image: url("../../images/icons/stack.svg#features-4");
 
     @media (min-width: $tablet) {
       margin: 3px 0 0 -1px;

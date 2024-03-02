@@ -185,7 +185,7 @@
     top: 2px;
     width: 19px;
     height: 16px;
-    background-image: url("../../images/icons/address-icon.svg");
+    background-image: url("../../images/icons/stack.svg#address");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -214,7 +214,7 @@
     right: 3px;
     width: 19px;
     height: 16px;
-    background-image: url("../../images/icons/phone-icon.svg");
+    background-image: url("../../images/icons/stack.svg#phone");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -255,7 +255,7 @@
     left: 4px;
     width: 12px;
     height: 16px;
-    mask-image: url("../../images/stack.svg#academy");
+    mask-image: url("../../images/icons/stack.svg#academy");
     background-color: var(--bg-darker);
   }
 }

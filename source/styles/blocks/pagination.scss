@@ -122,7 +122,7 @@
 .pagination__left {
   width: 6px;
   height: 10px;
-  mask-image: url("../../images/stack.svg#left-pagination");
+  mask-image: url("../../images/icons/stack.svg#left-pagination");
   background-color: var(--bg-dark);
 
   @media (min-width: $tablet) {
@@ -133,7 +133,7 @@
 .pagination__right {
   width: 6px;
   height: 10px;
-  mask-image: url("../../images/stack.svg#right-pagination");
+  mask-image: url("../../images/icons/stack.svg#right-pagination");
   background-color: var(--bg-dark);
 
   @media (min-width: $tablet) {

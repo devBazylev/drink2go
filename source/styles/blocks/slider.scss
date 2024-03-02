@@ -64,7 +64,7 @@
 
 .slider-button-prev-icon {
   margin: -1px 25% auto auto;
-  mask-image: url("../../images/stack.svg#left-arrow");
+  mask-image: url("../../images/icons/stack.svg#left-arrow");
 
   @media (min-width: $tablet) {
     margin: -1px 44% auto auto;
@@ -73,7 +73,7 @@
 
 .slider-button-next-icon {
   margin: -1px auto auto 25%;
-  mask-image: url("../../images/stack.svg#right-arrow");
+  mask-image: url("../../images/icons/stack.svg#right-arrow");
 
   @media (min-width: $tablet) {
     margin: -1px auto auto 44%;
