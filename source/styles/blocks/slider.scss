@@ -24,9 +24,12 @@
   }
 }
 
-.slider-image-2,
-.slider-image-3 {
-  display: none;
+.slider-image {
+ display: none;
+}
+
+.slider-image--js {
+  display: block;
 }
 
 .slider-button-prev,

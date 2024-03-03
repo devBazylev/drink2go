@@ -1,33 +1,14 @@
-function changePrice () {
-  const slider = document.getElementById('slider');
+let a = 0;
 
-  if (slider) {
-    noUiSlider.create(slider, {
-      start: [0, 900],
-      connect: true,
-      step: 10,
-      range: {
-        'min': [0],
-        'max': [972]
-      }
-    });
-    const input0 = document.getElementById('input-0');
-    const input1 = document.getElementById('input-1');
-    const inputs = [input0, input1];
-    slider.noUiSlider.on('update', (values, handle) => {
-      inputs[handle].value = Math.round(values[handle]);
-    });
-    const setRangeSlider = (i, value) => {
-      const arr = [null, null];
-      arr[i] = value;
-      slider.noUiSlider.set(arr);
-    };
-    inputs.forEach((element, index) => {
-      element.addEventListener('change', (e) => {
-        setRangeSlider(index, e.currentTarget.value);
-      });
-    });
-  }
-}
+const images = document.querySelectorAll('.slider-image');
 
-export { changePrice };
+const toggle = () => {
+  images[a].classList.toggle('slider-image--js');
+  a = a + 1;
+  images[a].classList.toggle('slider-image--js');
+};
+
+export { toggle };
+
+// toggle();
+// import { toggle } from './slider.js';
