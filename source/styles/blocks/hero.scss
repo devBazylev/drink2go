@@ -113,8 +113,10 @@
   }
 }
 
-.hero__price--old {
+.hero__price-old {
   grid-area: 5/2/6/3;
+  display: inline-flex;
+  align-items: center;
   margin: 3px 76px 60px auto;
   font-size: 16px;
   line-height: 32px;
@@ -129,7 +131,7 @@
 
   @media (min-width: $desktop) {
     grid-area: 4/3/5/4;
-    margin: 2px 0 158px;
+    margin: 2px 0 243px;
   }
 }
 

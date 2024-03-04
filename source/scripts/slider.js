@@ -3,10 +3,29 @@ const sources = Array.from(document.querySelectorAll('.slider__picture'));
 const inputs = document.querySelectorAll('.slider-input');
 const prev = document.querySelector('.slider-button-prev');
 const next = document.querySelector('.slider-button-next');
+const section = document.querySelector('.hero');
+const title = document.querySelector('.hero__title');
+const paragraph = document.querySelector('.hero__text');
+const oldPrice = document.querySelector('.hero__price-old');
+const price = document.querySelector('.hero__price');
+
+const data = [
+  { title: 'Декаф Флэт Уайт', paragraph: 'Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня', oldPrice: '295₽', price: '225₽', backgroundColor: '#F3EBE1'},
+  { title: 'Лавандовый Латте', paragraph: 'Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор', oldPrice: '285₽', price: '265₽', backgroundColor: '#EAE6FC'},
+  { title: 'Тройной Эспрессо', paragraph: 'Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость', oldPrice: '395₽', price: '375₽', backgroundColor: '#E5E6E8'},
+];
 
 let index = 0;
 let pathImg = image.src;
 let pathImgMinor = image.srcset;
+
+const changeData = () => {
+  title.textContent = data[index].title;
+  paragraph.textContent = data[index].paragraph;
+  oldPrice.textContent = data[index].oldPrice;
+  price.textContent = data[index].price;
+  section.style.background = data[index].backgroundColor;
+};
 
 const changePaths = function () {
   pathImg = pathImg.replace(/slide-[0-2]/, `slide-${index}`);
@@ -50,6 +69,7 @@ const onInput = function () {
   index = this.id;
   changePaths();
   checkState();
+  changeData();
 };
 
 const onPrevButton = () => {
@@ -57,6 +77,7 @@ const onPrevButton = () => {
     index --;
     changePaths();
     checkRadio();
+    changeData();
     remDis(next);
   }
   if (index === 0) {
@@ -69,6 +90,7 @@ const onNextButton = () => {
     index ++;
     changePaths();
     checkRadio();
+    changeData();
     remDis(prev);
   }
   if (index === 2) {
@@ -78,5 +100,8 @@ const onNextButton = () => {
 
 prev.addEventListener('click', onPrevButton);
 next.addEventListener('click', onNextButton);
+inputs.forEach((element) => {
+  element.addEventListener('change', onInput);
+});
 
-export { onInput };
+export { };

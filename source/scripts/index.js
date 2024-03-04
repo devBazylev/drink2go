@@ -1,12 +1,6 @@
 import { burgerHandler } from './burger.js';
 import { changePrice } from './no-ui-slider.js';
-import { onInput } from './slider.js';
-
-const inputs = document.querySelectorAll('.slider-input');
+import { } from './slider.js';
 
 burgerHandler();
 changePrice();
-
-inputs.forEach((element) => {
-  element.addEventListener('change', onInput);
-});
