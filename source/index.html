@@ -61,29 +61,13 @@
       <section class="hero" data-test="hero">
         <div class="slider">
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/slide-0-desktop@1x.webp 1x, images/slide-0-desktop@2x.webp 2x" width="600" height="600">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/slide-0-tablet@1x.webp 1x, images/slide-0-tablet@2x.webp 2x" width="476" height="476">
-            <source type="image/webp" srcset="images/slide-0-mobile@1x.webp 1x, images/slide-0-mobile@2x.webp 2x" width="280" height="280">
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/slide-0-desktop@1x.png 1x, images/slide-0-desktop@2x.png 2x" width="600" height="600">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/slide-0-tablet@1x.png 1x, images/slide-0-tablet@2x.png 2x" width="476" height="476">
-            <img class="slider-image slider-image--js" src="images/slide-0-mobile@1x.png" srcset="images/slide-0-mobile@2x.png 2x" width="280" height="280" alt="Кофе флэт уайт.">
+            <source class="slider__picture" type="image/webp" media="(min-width: 1440px)" srcset="images/slide-0-desktop@1x.webp 1x, images/slide-0-desktop@2x.webp 2x" width="600" height="600">
+            <source class="slider__picture" type="image/webp" media="(min-width: 768px)" srcset="images/slide-0-tablet@1x.webp 1x, images/slide-0-tablet@2x.webp 2x" width="476" height="476">
+            <source class="slider__picture" type="image/webp" srcset="images/slide-0-mobile@1x.webp 1x, images/slide-0-mobile@2x.webp 2x" width="280" height="280">
+            <source class="slider__picture" type="image/webp" media="(min-width: 1440px)" srcset="images/slide-0-desktop@1x.png 1x, images/slide-0-desktop@2x.png 2x" width="600" height="600">
+            <source class="slider__picture" type="image/webp" media="(min-width: 768px)" srcset="images/slide-0-tablet@1x.png 1x, images/slide-0-tablet@2x.png 2x" width="476" height="476">
+            <img class="slider__image" src="images/slide-0-mobile@1x.png" srcset="images/slide-0-mobile@2x.png 2x" width="280" height="280" alt="Кофе флэт уайт.">
           </picture>
-          <!-- <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/slide-1-desktop@1x.webp 1x, images/slide-1-desktop@2x.webp 2x" width="600" height="600">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/slide-1-tablet@1x.webp 1x, images/slide-1-tablet@2x.webp 2x" width="476" height="476">
-            <source type="image/webp" srcset="images/slide-1-mobile@1x.webp 1x, images/slide-1-mobile@2x.webp 2x" width="280" height="280">
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/slide-1-desktop@1x.png 1x, images/slide-1-desktop@2x.png 2x" width="600" height="600">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/slide-1-tablet@1x.png 1x, images/slide-1-tablet@2x.png 2x" width="476" height="476">
-            <img class="slider-image" src="images/slide-1-mobile@1x.png" srcset="images/slide-1-mobile@2x.png 2x" width="280" height="280" alt="Лавандовый латте.">
-          </picture>
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/slide-2-desktop@1x.webp 1x, images/slide-2-desktop@2x.webp 2x" width="600" height="600">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/slide-2-tablet@1x.webp 1x, images/slide-2-tablet@2x.webp 2x" width="476" height="476">
-            <source type="image/webp" srcset="images/slide-2-mobile@1x.webp 1x, images/slide-2-mobile@2x.webp 2x" width="280" height="280">
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/slide-2-desktop@1x.png 1x, images/slide-2-desktop@2x.png 2x" width="600" height="600">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/slide-2-tablet@1x.png 1x, images/slide-2-tablet@2x.png 2x" width="476" height="476">
-            <img class="slider-image" src="images/slide-2-mobile@1x.png" srcset="images/slide-2-mobile@2x.png 2x" width="280" height="280" alt="Эспрессо.">
-          </picture> -->
         </div>
         <button class="slider-button-prev" type="button" disabled>
           <span class="slider-button-prev-icon"></span>
@@ -459,5 +443,6 @@
       </a>
     </footer>
     <script src="vendor/nouislider/nouislider.js"></script>
+    <!-- <script src="scripts/index.js" type="module"></script> -->
   </body>
 </html>
