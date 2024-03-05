@@ -1,5 +1,5 @@
 const image = document.querySelector('.slider__image');
-const sources = Array.from(document.querySelectorAll('.slider__picture'));
+const sources = Array.from(document.querySelectorAll('.slider__source'));
 const inputs = document.querySelectorAll('.slider-input');
 const prev = document.querySelector('.slider-button-prev');
 const next = document.querySelector('.slider-button-next');
@@ -38,37 +38,37 @@ const changePaths = function () {
   });
 };
 
-const setDis = (element) => {
+const setDisabled = (element) => {
   element.setAttribute('disabled', '');
 };
 
-const remDis = (element) => {
+const removeDisabled = (element) => {
   element.removeAttribute('disabled', '');
 };
 
-const checkRadio = () => {
+const setCheckedRadio = () => {
   inputs[index].checked = true;
 };
 
-const changeState = function () {
+const checkAndChangeState = function () {
   if (index === 0) {
-    remDis(next);
-    setDis(prev);
+    removeDisabled(next);
+    setDisabled(prev);
   }
   if (index === 1) {
-    remDis(prev);
-    remDis(next);
+    removeDisabled(prev);
+    removeDisabled(next);
   }
   if (index === 2) {
-    remDis(prev);
-    setDis(next);
+    removeDisabled(prev);
+    setDisabled(next);
   }
 };
 
 const onInput = function () {
   index = +this.id;
   changePaths();
-  changeState();
+  checkAndChangeState();
   changeData();
 };
 
@@ -76,20 +76,20 @@ const onPrevButton = () => {
   if (index >= 1 && index <= 2) {
     index --;
     changePaths();
-    checkRadio();
+    setCheckedRadio();
     changeData();
   }
-  changeState();
+  checkAndChangeState();
 };
 
 const onNextButton = () => {
   if (index >= 0 && index <= 1) {
     index ++;
     changePaths();
-    checkRadio();
+    setCheckedRadio();
     changeData();
   }
-  changeState();
+  checkAndChangeState();
 };
 
 prev.addEventListener('click', onPrevButton);
