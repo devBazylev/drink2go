@@ -50,7 +50,7 @@ const checkRadio = () => {
   inputs[index].checked = true;
 };
 
-const checkState = function () {
+const changeState = function () {
   if (index === 0) {
     remDis(next);
     setDis(prev);
@@ -68,7 +68,7 @@ const checkState = function () {
 const onInput = function () {
   index = +this.id;
   changePaths();
-  checkState();
+  changeState();
   changeData();
 };
 
@@ -78,11 +78,8 @@ const onPrevButton = () => {
     changePaths();
     checkRadio();
     changeData();
-    remDis(next);
   }
-  if (index === 0) {
-    setDis(prev);
-  }
+  changeState();
 };
 
 const onNextButton = () => {
@@ -91,11 +88,8 @@ const onNextButton = () => {
     changePaths();
     checkRadio();
     changeData();
-    remDis(prev);
   }
-  if (index === 2) {
-    setDis(next);
-  }
+  changeState();
 };
 
 prev.addEventListener('click', onPrevButton);
