@@ -51,22 +51,22 @@ const checkRadio = () => {
 };
 
 const checkState = function () {
-  if (+index === 0) {
+  if (index === 0) {
+    remDis(next);
     setDis(prev);
-    remDis(next);
   }
-  if (+index === 1) {
+  if (index === 1) {
     remDis(prev);
     remDis(next);
   }
-  if (+index === 2) {
+  if (index === 2) {
+    remDis(prev);
     setDis(next);
-    remDis(prev);
   }
 };
 
 const onInput = function () {
-  index = this.id;
+  index = +this.id;
   changePaths();
   checkState();
   changeData();
