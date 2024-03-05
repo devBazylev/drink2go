@@ -27,7 +27,7 @@ const changeData = () => {
   section.style.background = data[index].backgroundColor;
 };
 
-const changePaths = function () {
+const changePaths = () => {
   pathImg = pathImg.replace(/slide-[0-2]/, `slide-${index}`);
   pathImgMinor = pathImgMinor.replace(/slide-[0-2]/, `slide-${index}`);
   image.setAttribute('src', pathImg);
@@ -46,7 +46,7 @@ const removeDisabled = (element) => {
   element.removeAttribute('disabled', '');
 };
 
-const setCheckedRadio = () => {
+const setRadioChecked = () => {
   inputs[index].checked = true;
 };
 
@@ -76,7 +76,7 @@ const onPrevButton = () => {
   if (index >= 1 && index <= 2) {
     index --;
     changePaths();
-    setCheckedRadio();
+    setRadioChecked();
     changeData();
   }
   checkAndChangeState();
@@ -86,7 +86,7 @@ const onNextButton = () => {
   if (index >= 0 && index <= 1) {
     index ++;
     changePaths();
-    setCheckedRadio();
+    setRadioChecked();
     changeData();
   }
   checkAndChangeState();
