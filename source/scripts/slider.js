@@ -1,8 +1,8 @@
 const image = document.querySelector('.slider__image');
 const sources = Array.from(document.querySelectorAll('.slider__source'));
 const inputs = document.querySelectorAll('.slider-input');
-const prev = document.querySelector('.slider-button-prev');
-const next = document.querySelector('.slider-button-next');
+const previousButton = document.querySelector('.slider-button-prev');
+const nextButton = document.querySelector('.slider-button-next');
 const section = document.querySelector('.hero');
 const title = document.querySelector('.hero__title');
 const paragraph = document.querySelector('.hero__text');
@@ -52,16 +52,16 @@ const setCheckedRadio = () => {
 
 const checkAndChangeState = function () {
   if (index === 0) {
-    removeDisabled(next);
-    setDisabled(prev);
+    removeDisabled(nextButton);
+    setDisabled(previousButton);
   }
   if (index === 1) {
-    removeDisabled(prev);
-    removeDisabled(next);
+    removeDisabled(previousButton);
+    removeDisabled(nextButton);
   }
   if (index === 2) {
-    removeDisabled(prev);
-    setDisabled(next);
+    removeDisabled(previousButton);
+    setDisabled(nextButton);
   }
 };
 
@@ -92,8 +92,8 @@ const onNextButton = () => {
   checkAndChangeState();
 };
 
-prev.addEventListener('click', onPrevButton);
-next.addEventListener('click', onNextButton);
+previousButton.addEventListener('click', onPrevButton);
+nextButton.addEventListener('click', onNextButton);
 inputs.forEach((element) => {
   element.addEventListener('change', onInput);
 });
