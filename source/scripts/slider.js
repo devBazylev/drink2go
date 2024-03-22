@@ -50,7 +50,7 @@ const setRadioChecked = () => {
   inputs[index].checked = true;
 };
 
-const checkAndChangeState = function () {
+const checkAndChangeState = () => {
   if (index === 0) {
     removeDisabled(nextButton);
     setDisabled(previousButton);
