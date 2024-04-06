@@ -1,22 +1,24 @@
-function getTextNodesIn(elem, opt_fnFilter) {
-  var textNodes = [];
+function getTextNodesIn(elem, optionFilter) {
+  let textNodes = [];
   if (elem) {
-    for (var nodes = elem.childNodes, i = nodes.length; i--;) {
-      var node = nodes[i],
+    for (let nodes = elem.childNodes, i = nodes.length; i--;) {
+      const node = nodes[i],
         nodeType = node.nodeType;
-      if (nodeType == 3) {
-        if (!opt_fnFilter || opt_fnFilter(node, elem)) {
+      if (nodeType === 3) {
+        if (!optionFilter || optionFilter(node, elem)) {
           if (node.data.trim() !== '') {
             textNodes.push(node.data.trim() !== '' ? node : '');
 
           }
         }
-      } else if (nodeType == 1 || nodeType == 9 || nodeType == 11) {
-        textNodes = textNodes.concat(getTextNodesIn(node, opt_fnFilter));
+      } else if (nodeType === 1 || nodeType === 9 || nodeType === 11) {
+        textNodes = textNodes.concat(getTextNodesIn(node, optionFilter));
       }
     }
   }
   return textNodes;
 }
 
-getTextNodesIn(document.body).forEach((item) => { item.textContent = "У меня есть несколько клиентов, которые записались ко мне на стрижку, не успев даже зайти в салон." })
+getTextNodesIn(document.body).forEach((item) => {
+  item.textContent = 'У меня есть несколько клиентов, которые записались ко мне на стрижку, не успев даже зайти в салон.';
+});
