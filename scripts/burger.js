@@ -1,0 +1,1 @@
+var e=document.querySelector(".header__navigation"),t=document.querySelector(".header__toggle"),n=()=>{e.classList.toggle("header__navigation--closed"),e.classList.toggle("header__navigation--opened")},o=()=>{t.addEventListener("click",n)};export{o as burgerHandler};
